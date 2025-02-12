@@ -271,3 +271,24 @@ section {
     margin: 0 auto; /* Center the grid container */
     padding: 0px;
 }
+
+#text4 {
+    font-size: 60px;
+    padding-top: 50px; 
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text5 {
+    
+display: flex;
+width: 30%;
+max-width: 50vw;
+max-height: 50vh;
+margin: 2rem auto;
+padding: 1rem;
+overflow-y: auto;
+font-family: monospace;
+}
