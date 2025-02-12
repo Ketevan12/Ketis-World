@@ -273,22 +273,22 @@ section {
 }
 
 #text4 {
-    font-size: 60px;
-    padding-top: 50px; 
+    font-size: 30px;
+    padding-top: 60px; 
     text-align: center;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: monospace;
 }
 #text5 {
-    
 display: flex;
 width: 30%;
 max-width: 50vw;
 max-height: 50vh;
 margin: 2rem auto;
-padding: 1rem;
+padding-top: 100px; 
 overflow-y: auto;
 font-family: monospace;
 }
