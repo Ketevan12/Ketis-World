@@ -1,0 +1,485 @@
+body {
+  font-family: "Jacquard 12", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(0, 255, 251);
+  
+}
+
+.jacquard-12-regular {
+  font-family: "Jacquard 12", serif;
+  font-weight: 50;
+  font-style: normal;
+}
+
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 201, 255, 1); /* Set alpha to 1 for full opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+  color: rgb(255, 0, 195);
+}
+
+.splash-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: -10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  color: rgb(200, 0, 113);
+
+}
+
+.splash-text span {
+  gap: -100px;
+  font-size: 14vw; /* Use viewport width for scaling */
+  font-weight: bold;
+  white-space: nowrap;
+  
+  text-shadow: 2px 2px 5px rgb(9, 81, 189), -2px -2px 5px rgb(9, 81, 189), 2px -2px 5px rgb(9, 81, 189), -2px 2px 5px rgb(9, 81, 189);
+}
+
+.flickering-image {
+  width: 40vh; /* Set width as a percentage of viewport height */
+  height: 40vh; /* Set height as a percentage of viewport height */
+  margin-top: 10vh; /* Adjust margin for better placement */
+  max-width: 60vw; /* Limit width on smaller screens */
+  max-height: 60vh; /* Limit height on smaller screens */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .splash-text {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Add a bit of gap between text and image */
+  }
+
+  .splash-text span {
+    font-size: 15vw; /* Slightly larger font size for small screens */
+  }
+
+  .flickering-image {
+    width: 30vh; /* Adjust the image size for smaller screens */
+    height: 30vh; /* Adjust the image size for smaller screens */
+    margin-top: 5vh; /* Reduce the margin */
+  }
+}
+
+
+header h1 {
+  margin-left: 10px;
+  font-size: 2em;
+}
+
+/* Make the flickering image slightly bigger */
+
+
+/* Style for the rest of the page */
+section {
+  padding: 20px;
+}
+
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;  
+}
+
+
+#circle {
+  width: 80vw;
+  height: 80vw;
+  max-width: 80vh;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+
+
+.shadow {
+  text-decoration: none;
+  fill: rgba(242, 201, 255, 1); /* Set alpha to 1 for full opacity */
+  transition: text-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.shadow:hover {
+
+  text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);}
+
+
+/* Inner text rotates clockwise */
+#rotating-text-clockwise {
+  animation: rotate-clockwise 10s linear infinite;
+  transform-origin: 150px 150px; /* Center of the SVG */
+}
+
+
+/* Outer text rotates counterclockwise */
+#rotating-text-counterclockwise {
+  animation: rotate-counterclockwise 15s linear infinite;
+  transform-origin: 150px 150px; /* Center of the SVG */
+}
+
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+#rotating-text-clockwise text,
+#rotating-text-counterclockwise text {
+  text-decoration: none;  /* Remove underline */
+  fill: black;            /* Ensure text is visible */
+}
+
+#rotating-text-clockwise textPath,
+#rotating-text-counterclockwise textPath {
+  text-decoration: none;  /* Remove underline from textPath */
+}
+
+  
+#scroll-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0; /* Fix to bottom of the screen */
+  left: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  overflow: hidden; /* Prevent overflow issues */
+  font-weight: 30;
+}
+
+#scroll-content {
+  display: flex;
+  align-items: center; /* Keep text and images aligned */
+  gap: 20px; /* Adjust spacing between elements */
+  padding-left: 0%; /* Start off-screen */
+  animation: scroll-text 35s linear infinite;
+  
+}
+
+
+#scroll-content span {
+  font-size: 30px;
+  color: rgb(231, 0, 181);
+}
+
+.flickering-image1 {
+  height: 100px; /* Adjust size */
+  width: auto;
+}
+
+
+@keyframes scroll-text {
+  0% { transform: translateX(100%); } /* Start off-screen */
+  100% { transform: translateX(-100%); } /* Move fully off-screen */
+}
+
+#contain {
+  position: absolute; /* Allow precise positioning */
+  top: 0;  /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 15vh;  /* Set width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 20vw; 
+  max-height: 20vh; 
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align items to the left */
+  padding: 0px; 
+  font-size: 8vh;
+  padding-top:22px;
+  color:rgb(255, 0, 195);
+  padding-left: 9px;
+}
+
+
+.cursor { 
+  display: none;
+}
+
+
+
+
+html {
+  --s: 6px; /* control the size */
+  
+  --g: repeating-conic-gradient(pink 0 25%,#ECE5CE 0 50%) 0/;
+  background:
+    var(--g) calc(1*var(--s)) calc(7*var(--s)),
+    var(--g) calc(2*var(--s)) calc(5*var(--s)),
+    var(--g) calc(3*var(--s)) calc(3*var(--s)),
+    var(--g) calc(5*var(--s)) calc(2*var(--s)),
+    var(--g) calc(7*var(--s)) calc(1*var(--s));
+  background-blend-mode: lighten;
+}
+
+.container10{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  width: 100%;
+  height:1000px;
+  background:aquamarine;/* Set alpha to 1 for full opacity */
+  overflow: hidden;
+}
+.container10 p{
+  padding:20px;
+  margin:0;
+  font-size:40px;
+  font-weight: bold;
+  color:rgb(9, 81, 189)
+}
+
+.stars{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height:100%;
+}
+
+.stars span{
+  position:relative;
+}
+
+.stars span:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  
+  /*星のサイズ調節*/
+  transform:scale(0.20);
+}
+
+.stars span.s:before{
+  
+   /*20px 20pxが中央*/
+  box-shadow: 20px 20px #FFFFFF;
+}
+
+.stars span.m:before{
+  box-shadow: 
+    /*1段目*/
+    20px 10px #FFF176,
+    /*2段目*/
+    10px 20px #FFF176,
+    20px 20px #FFFFFF,
+    30px 20px #FFF176,
+    /*3段目*/
+    20px 30px #FFF176;
+}
+
+.stars span.l:before{
+  box-shadow: 
+    /*0段目*/
+    20px  0px #FDD835,
+    /*1段目*/
+    20px 10px #FFF176,
+    /*2段目*/
+     0px 20px #FDD835,
+    10px 20px #FFF176,
+    20px 20px #FFFFFF,
+    30px 20px #FFF176,
+    40px 20px #FDD835,
+    /*3段目*/
+    20px 30px #FFF176,
+    /*4段目*/
+    20px 40px #FDD835;
+}
+
+
+ /*
+星の位置とアニメーション指定
+最初の秒はアニメーション時間、2つ目は開始までの時間
+*/
+.stars span:nth-child(1){left:10%; top:10%; animation: star-anim 8s 0s infinite;}
+.stars span:nth-child(2){left:80%; top:20%; animation: star-anim 6s 1s infinite;}
+.stars span:nth-child(3){left:60%; top:40%; animation: star-anim 5s 2s infinite;}
+.stars span:nth-child(4){left:20%; top:70%; animation: star-anim 7s 3s infinite;}
+.stars span:nth-child(5){left:80%; top:80%; animation: star-anim 7s 4s infinite;}
+
+.stars span:nth-child(6){left:40%; top:10%; animation: star-anim 4s 0s infinite;}
+.stars span:nth-child(7){left:10%; top:50%; animation: star-anim 7s 1s infinite;}
+.stars span:nth-child(8){left:50%; top:50%; animation: star-anim 8s 2s infinite;}
+.stars span:nth-child(9){left:90%; top:90%; animation: star-anim 5s 3s infinite;}
+.stars span:nth-child(10){left:80%; top:50%; animation: star-anim 7s 4s infinite;}
+
+.stars span:nth-child(11){left:90%; top:10%; animation: star-anim 5s 0s infinite;}
+.stars span:nth-child(12){left:10%; top:80%; animation: star-anim 6s 1s infinite;}
+.stars span:nth-child(13){left:30%; top:20%; animation: star-anim 7s 2s infinite;}
+.stars span:nth-child(14){left:60%; top:90%; animation: star-anim 8s 3s infinite;}
+.stars span:nth-child(15){left:80%; top:50%; animation: star-anim 7s 4s infinite;}
+
+/*アニメーションキーフレーム*/
+@keyframes star-anim {
+  0% {opacity:0;}
+  5% {opacity:1;}
+  10% {opacity:0;}
+  55% {opacity:0;}
+  60% {opacity:1;}
+  95% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#contenty {
+  position: absolute;
+  right: 0%;  /* Adjusted for proper positioning */
+  top: 3%;  /* Adjusted to vertically center */
+  padding-right: 10px;
+  z-index: 100;  /* Ensures it's above other elements */
+  font-size: 4vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap:10px;
+  padding-top: 2px;
+  font-size:min(5vw, 30px) ;
+  padding-right: 9px;
+}
+
+
+
+.parent{
+  position: relative;
+  padding-left: 10px;
+}
+.over-img{
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  padding-left: 10px;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+ 
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: rgba(242, 201, 255, 1);
+}
+
+
+
+.close-btn {
+  color: rgb(40, 11, 208); 
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+}
+#popup:hover + iframe {
+  opacity: 1;
+  transition: opacity 1.5s linear;
+}
+
+
+
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.splash-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  background-color: rgba(242, 201, 255, 1); /* Set alpha to 1 for full opacity */
+}
+
+
+
+#ketis-link {
+  padding-top: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+  color: #000000;
+}
+
+#ketis-link:hover {
+  text-shadow: 2px 2px 10px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);
+}
+
+  #rotating-text-clockwise:hover {
+    transition: transform 10s ease, animation-play-state 5s ease;
+    animation-play-state: paused;
+    transform: rotate(0deg);
+    text-shadow: 2px 2px 10px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111); /* Make shadow more noticeable */
+ 
+     }
+  
+  #rotating-text-counterclockwise:hover {
+    transition: transform 10s ease, animation-play-state 5s ease;
+    animation-play-state: paused;
+    transform: rotate(0deg);
+    text-shadow: 2px 2px 10px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111); /* Make shadow more noticeable */
+  }
+  
