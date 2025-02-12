@@ -76,6 +76,15 @@ section {
 }
 
 
+#imgvibe2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: -200px;
+}
+
 
 #imgvibe {
     display: flex;
@@ -85,6 +94,29 @@ section {
     height: 100vh;
     padding-top: 0px;
 }
+#imgvibe3-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   margin: 0;
+    padding: 0;
+}
+
+#imgvibe3 {
+    transition: transform 0.2s;
+    width: 50%;
+    height:50%; 
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    margin-top: -90px;
+}
+
+#imgvibe3:hover {
+    transform: scale(1.2); 
+}
+
 
 #imgvibe img {
     max-width: 100%;
@@ -106,9 +138,10 @@ section {
     padding-top: 130px;
 }
 
+
 #text {
     display: flex;
-    width: auto;
+    width: 30%;
     max-width: 50vw;
     max-height: 50vh;
     margin: 4rem auto;
@@ -128,33 +161,8 @@ section {
   #ketis-link:hover {
     text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);}
 
-  
-    #text2, #text1 {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        width: auto;
-        max-width: 50vw;
-        max-height: 50vh;
-        overflow-y: auto;
-        z-index: 999;
-        padding-left: 20px;
-        padding-top: 100px;
-        text-align: center; /* Optional for center alignment of text */
-    }
+
     
-    /* Additional specific adjustments for #text1 */
-    #text1 {
-        font-size: 70px;
-        padding-top: 100px; /* Adjust padding as per your design */
-        padding-left: 300px; /* Adjust padding as per your design */
-    }
-    
-    /* Optional for #text2 if you need separate adjustments */
-    #text2 {
-        font-family: monospace;
-        padding-top: 100px; /* Adjust padding as needed */
-    }
     .zoomvid{
         transition: transform 0.2s;
         width: 50%;
@@ -165,7 +173,88 @@ section {
 
     }
     .zoomvid:hover{
-        transform: scale(1.5);
-  
-
+        transform: scale(1.2); 
     }
+
+    #text1 {
+        font-size: 70px;
+        padding-top: 100px; 
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #text2 {
+        font-family: monospace;
+        padding-top: 50px;
+        text-align: left;
+        display: block;
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        cursor: pointer; /* Makes it clear it's interactive */
+    }
+    
+    /* Hidden iframe container */
+    #popupIframe {
+        display: none; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60vw;
+        height: 60vh;
+        border: none;
+        background: rgba(0, 0, 0, 0.8); /* Dark background for better visibility */
+        z-index: 1000;
+        padding: 10px;
+    }
+    
+    /* Ensure image inside iframe scales */
+    #popupIframe img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    /* Show iframe on hover */
+    #text2:hover + #popupIframe {
+        display: block;
+    }
+    
+.zoom2 {
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+    position: relative;
+    margin: -300 auto;
+    margin-left: 500;
+    width: 30%;
+    height: 30%;
+}
+
+.zoom2:hover {
+    transform: scale(2.2); 
+   }
+   #imgGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows, height adjusts based on content */
+    gap: 20px; /* Space between images */
+    justify-content: center;
+    align-items: center;
+    width: 80vw; /* Adjust width */
+    margin: 0 auto; /* Center the grid container */
+    padding: 0px;
+}
+
+.img-item {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-item:hover {
+    transform: scale(2.2); /* Slight zoom effect */
+}
