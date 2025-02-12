@@ -179,3 +179,8 @@ window.addEventListener('mousemove', positionCursor);
   }
   
 
+  const circles = document.querySelectorAll('.circle');
+  circles.forEach(circle => {
+    circle.style.backgroundColor = 'white'; // Ensure this is applied
+  });
+  
