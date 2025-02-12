@@ -258,3 +258,16 @@ section {
 .img-item:hover {
     transform: scale(2.2); /* Slight zoom effect */
 }
+
+
+#imgGrid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 3 rows, height adjusts based on content */
+    gap: 40px; /* Space between images */
+    justify-content: center;
+    align-items: center;
+    width: 25vw; /* Adjust width */
+    margin: 0 auto; /* Center the grid container */
+    padding: 0px;
+}
