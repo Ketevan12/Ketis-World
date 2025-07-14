@@ -1,12 +1,27 @@
-body {
-    font-family: "Jacquard 12", serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgba(242, 201, 255, 1);
-  
-}
 
+body {
+  font-family: "lores-22-serif", sans-serif;
+  margin-top: -10px; /* valid, though negative margins can be tricky */
+  padding: 0; /* negative padding is invalid, so reset to 0 */
+
+  background-color: rgb(255, 234, 245);
+  color: rgb(255, 0, 204);
+  font-family: "birch-std", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+  .birch-stdt-regular {
+    font-family: "birch-std", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .pixelify-sans {
+    font-family: "lores-22-serif", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 .jacquard-12-regular {
     font-family: "Jacquard 12", serif;
     font-weight: 50;
@@ -14,24 +29,28 @@ body {
 }
 
 #contain {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    max-width: 20vw; 
-    max-height: 20vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: 8vh;
+    margin-top: -10;
+
+    right: 0%;
+    top: 0%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0px;
+    font-size: min(5vw, 30px);
+    padding-right: 109px;
     padding: 22px 0;
-    color: rgb(255, 0, 195);
+
+    justify-content: left;
+    align-items: left; 
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: min(5vw, 30px);
 }
 
 header h1 {
     margin-left: 10px;
     font-size: 2em;
+    margin-top: -10;
 }
 
 section {
@@ -49,6 +68,8 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     text-decoration: none;
+
+  
 }
 
 #contenty {
@@ -60,6 +81,7 @@ section {
     gap: 10px;
     font-size: min(5vw, 30px);
     padding-right: 9px;
+    margin-top: -10;
 }
 
 #shadow {
@@ -141,23 +163,27 @@ section {
 
 #text {
     display: flex;
-    width: 30%;
+    width: 100%;
     max-width: 50vw;
-    max-height: 50vh;
-    margin: 4rem auto;
-    padding: 3rem;
+    max-height: 30vh;
+    margin: 2rem auto;
+    padding: .0rem;
     overflow-y: auto;
     font-family: monospace;
     z-index: 999;
+    color:black
+    
 }
-#ketis-link {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    padding: 10px;
 
-  }
   
+#ok {
+  margin-bottom: 5px;
+  border: .5px solid rgb(231, 0, 181);
+  text-align: right;
+  padding: 8px;
+  padding-top: -10px;
+}
+
   #ketis-link:hover {
     text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);}
 
@@ -177,13 +203,14 @@ section {
     }
 
     #text1 {
-        font-size: 70px;
-        padding-top: 100px; 
+        font-size: 170%;
+        padding-top: 30px; 
         text-align: center;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        color:  rgb(255, 0, 204);
     }
     
     #text2 {
@@ -195,7 +222,10 @@ section {
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        cursor: pointer; /* Makes it clear it's interactive */
+        cursor: pointer; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     
     /* Hidden iframe container */
@@ -258,7 +288,10 @@ section {
 .img-item:hover {
     transform: scale(2.2); /* Slight zoom effect */
 }
-
+#img-item:onclick {
+    width: 70px;
+    height: 74px;
+}
 
 #imgGrid2 {
     display: grid;
@@ -273,15 +306,28 @@ section {
 }
 
 #text4 {
-    font-size: 30px;
-    padding-top: 60px; 
-    text-align: center;
-    width: 100%;
+    font-size: 10px;;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 70%;
+
+    max-height: 60vh;
+    margin: 1rem auto;
+    padding-top: 100px; 
     font-family: monospace;
+    justify-items: baseline;
+    color:blue;
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid blue;
+    padding: 20px;
+    text-align: center;
+
+
+    font-family: arial;
+    position: relative;
+
 }
+
 #text5 {
 display: flex;
 width: 30%;
@@ -291,4 +337,775 @@ margin: 2rem auto;
 padding-top: 100px; 
 overflow-y: auto;
 font-family: monospace;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.main_view {
+    width: 80%;
+    height: 25rem;
+}
+
+.main_view img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.side_view {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.side_view img {
+    width: 9rem;
+    height: 7rem;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+
+  .left-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    font-family: 'Jacquard 12', cursive;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+
+    z-index: 10;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds space between items */
+    box-sizing: border-box;
+  }
+  
+  .container input {
+    display: none;
+  }
+  .container label {
+    position: relative;
+    flex: 0 0 calc(33.333% - 7px); /* account for gap */
+    aspect-ratio: 1 / 1;
+    border: 10px solid white; /* thick white border */
+    box-sizing: border-box;
+    background: center center / cover no-repeat;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 0;
+  }
+  
+  .container label:hover {
+    border-color: rgb(255, 0, 204); /* pink border */
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.5); /* optional pink glow */
+    transform: scale(1.02); /* optional slight zoom */
+    z-index: 1;
+  }
+  
+  
+  /* Expand on click */
+  input:checked + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  #containerbox {
+    margin-top: 100px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: monospace;
+
+width: 27rem;
+height: 42rem;
+    margin-left: 2rem;
+    margin-right: 10rem;
+  
+    z-index: 1;
+  
+  }
+
+  .box {
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    background:rgb(255, 234, 245);
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border: 1px solid hotpink;
+    color:hotpink;
+  }
+
+  #box1 {
+    top: 30px;
+    left: 40px;
+    
+  }
+
+
+  #box2 {
+    top: 320px;
+    left: 230px;
+ 
+  }
+
+
+
+
+  #proj1 {
+    top: 180px;
+    left: 200px;   
+    color: rgb(0, 255, 21);
+    
+  }
+  #proj1:hover {
+    border-color: rgb(255, 0, 204); /* pink border */
+    box-shadow: 0 0 15px rgba(252, 74, 216, 0.5); /* optional pink glow */
+    transform: scale(1.02); /* optional slight zoom */
+    z-index: 1;
+  }
+
+  #proj1 .preview {
+    display: none;
+    position: absolute;
+    border: 2px solid  rgb(255, 0, 204);
+    z-index: 3;
+    background: white;
+    transform: scale(1.02); 
+  }
+  
+
+   /* Large screen: show image on the left side of the screen */
+   @media (min-width: 768px) {
+    #proj1:hover .preview {
+      display: block;
+      top: -10;
+      left: 600%; 
+      width: 600%;
+         transform: scale(1.02); 
+    }
+  
+    #hover-line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      transform: scale(1.02); 
+    }
+  
+    #proj1:hover ~ #hover-line line {
+      x1: 280;
+      y1: 580;
+      x2: 50;
+      y2: 580;
+    }
+  }
+  
+  /* Small screens: show image near the text */
+  @media (max-width: 767px) {
+    #proj1:hover .preview {
+      display: block;
+      top: -160px;
+      left: -40px;
+    }
+  
+    #hover-line {
+      display: none;
+    }
+  }
+
+  #proj3 {
+    top: 230px;
+    left: 300px;
+  }
+  #proj3:hover {
+    border-color: rgb(255, 0, 204); /* pink border */
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.5); /* optional pink glow */
+    transform: scale(1.02); /* optional slight zoom */
+    z-index: 1;
+  }
+
+  #proj3 .preview {
+    display: none;
+    position: absolute;
+    border: 2px solid  rgb(255, 0, 204);
+    z-index: 3;
+    background: white;
+  }
+  
+  /* Large screen: show image on the left side of the screen */
+  @media (min-width: 768px) {
+    #proj3:hover .preview {
+      display: block;
+      top: -10;
+      left: 600%; 
+      width: 600%;
+      transform: scale(1.02); 
+    }
+  
+    #hover-line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  
+    #proj3:hover ~ #hover-line line {
+      x1: 280;
+      y1: 580;
+      x2: 50;
+      y2: 580;
+    }
+  }
+  
+  /* Small screens: show image near the text */
+  @media (max-width: 767px) {
+    #proj3:hover .preview {
+      display: block;
+      top: -120px;
+      left: -60px;
+    }
+  
+    #hover-line {
+      display: none;
+    }
+  }
+  #proj4 {
+    top: 610px;
+    left: 130px;
+  }
+
+  #proj4:hover {
+    border-color: rgb(255, 0, 204); /* pink border */
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.5); /* optional pink glow */
+    transform: scale(1.02); /* optional slight zoom */
+    z-index: 99;
+  }
+
+  
+  #proj4 .preview {
+    display: none;
+    position: absolute;
+    width: 200px;
+    border: 2px solid  rgb(255, 0, 204);
+    z-index: 3;
+    background: white;
+  }
+  
+  /* Large screen: show image on the left side of the screen */
+  @media (min-width: 768px) {
+    #proj4:hover .preview {
+      display: block;
+      left: 300%; 
+      width:200%;
+ 
+    }
+  
+    #hover-line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  
+    #proj4:hover ~ #hover-line line {
+      x1: 280;
+      y1: 580;
+      x2: 50;
+      y2: 580;
+    }
+  }
+  
+  /* Small screens: show image near the text */
+  @media (max-width: 767px) {
+    #proj4:hover .preview {
+      display: block;
+      top: -160px;
+      left: -20px;
+    }
+  
+    #hover-line {
+      display: none;
+    }
+  }
+
+  #proj5 {
+    top: 480px;
+    left: 70px;
+
+  }
+
+    
+  #proj5:hover {
+    border-color: rgb(255, 0, 204);
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.5);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+  }
+  
+  #proj5 .preview {
+    display: none;
+    position: absolute;
+    width: 200px;
+    border: 2px solid  rgb(255, 0, 204);
+    z-index: 3;
+    background: white;
+  }
+  
+  /* Large screen: show image on the left side of the screen */
+  @media (min-width: 768px) {
+    #proj5:hover .preview {
+      display: block;
+      top: -380;
+      left: 290%; 
+      width: 280%;
+    }
+  
+    #hover-line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  
+    #proj5:hover ~ #hover-line line {
+      x1: 280;
+      y1: 580;
+      x2: 50;
+      y2: 580;
+    }
+  }
+  
+  /* Small screens: show image near the text */
+  @media (max-width: 767px) {
+    #proj5:hover .preview {
+      display: block;
+      top: -160px;
+      left: -20px;
+    }
+  
+    #hover-line {
+      display: none;
+    }
+  }
+  
+  #proj6 {
+    position: absolute;
+    top: 560px;
+    left: 280px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+  }
+  
+  #proj6:hover {
+    border-color: rgb(255, 0, 204);
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.5);
+    transform: scale(1.02);
+    z-index: 2;
+  }
+  
+  #proj6 .preview {
+    display: none;
+    position: absolute;
+    width: 200px;
+    border: 2px solid  rgb(255, 0, 204);
+    z-index: 3;
+    background: white;
+  }
+  
+  /* Large screen: show image on the left side of the screen */
+  @media (min-width: 768px) {
+    #proj6:hover .preview {
+      display: block;
+      top: -400;
+      left: 220%; 
+      width: 400%;
+    }
+  
+    #hover-line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  
+    #proj6:hover ~ #hover-line line {
+      x1: 280;
+      y1: 580;
+      x2: 50;
+      y2: 580;
+    }
+  }
+  
+  /* Small screens: show image near the text */
+  @media (max-width: 767px) {
+    #proj6:hover .preview {
+      display: block;
+      top: -180px;
+      left: -40px;
+    }
+  
+    #hover-line {
+      display: none;
+    }
+  }
+  
+  #proj7 {
+    position: absolute;
+    top: 260px;
+    left: 20px;
+    z-index: 99;
+    color: hotpink;
+  }
+  #proj7 .preview {
+    display: none;
+    position: absolute;
+    width: 200px;
+    border: 2px solid  rgb(255, 0, 204);
+    z-index: 99;
+    background: white;
+  }
+  #proj7:hover {
+    border-color: rgb(255, 0, 204);
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.5);
+    transform: scale(1.02);
+    z-index: 2;
+  }
+
+
+  /* Large screen: show image on the left side of the screen */
+  @media (min-width: 768px) {
+    #proj7:hover .preview {
+      display: block;
+      top: -400%;
+      left: 420%; 
+      width: 200%;
+    }
+  
+    #hover-line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  
+    #proj7:hover ~ #hover-line line {
+      x1: 280;
+      y1: 580;
+      x2: 50;
+      y2: 580;
+    }
+  }
+  
+  /* Small screens: show image near the text */
+  @media (max-width: 767px) {
+    #proj7:hover .preview {
+      display: block;
+      top: -210px;
+      left: 10px;
+      width: 120px;
+    }
+  
+    #hover-line {
+      display: none;
+    }
+  }
+  
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send behind boxes */
+  }
+  
+  #circle {
+        position: absolute;
+        top: 50%;
+        right: -90%;
+        width: 80px; /* Smaller width */
+        height: -200px; /* Smaller height */
+        transform: none; /* Remove center transform */
+      
+  }
+  
+  
+  .shadow:hover {
+  
+    text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);}
+  
+  
+  /* Inner text rotates clockwise */
+  #rotating-text-clockwise {
+    animation: rotate-clockwise 10s linear infinite;
+    transform-origin: 150px 150px; /* Center of the SVG */
+  }
+  
+  
+  /* Outer text rotates counterclockwise */
+  #rotating-text-counterclockwise {
+    animation: rotate-counterclockwise 15s linear infinite;
+    transform-origin: 150px 150px; /* Center of the SVG */
+  }
+  
+  @keyframes rotate-clockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate-counterclockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  #rotating-text-clockwise text,
+  #rotating-text-counterclockwise text {
+     /* Remove underline */
+    fill: rgb(231, 0, 181);        /* Ensure text is visible */
+  }
+  
+  #rotating-text-clockwise textPath,
+  #rotating-text-counterclockwise textPath {
+     /* Remove underline from textPath */
+  }
+  
+    
+
+
+  
+  
+  @keyframes scroll-text {
+    0% { transform: translateX(100%); } /* Start off-screen */
+    100% { transform: translateX(-100%); } /* Move fully off-screen */
+  }
+  
+
+
+  
+  #ketis-link:hover {
+     
+    text-shadow: 2px 2px 5px rgb(9, 81, 189), -2px -2px 5px rgb(9, 81, 189), 2px -2px 5px rgb(9, 81, 189), -2px 2px 5px rgb(9, 81, 189);
+  }
+  
+    #rotating-text-clockwise:hover {
+      transition: transform 10s ease, animation-play-state 5s ease;
+      animation-play-state: paused;
+      transform: rotate(0deg);
+      text-shadow: 2px 2px 10px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111); /* Make shadow more noticeable */
+   
+       }
+    
+    #rotating-text-counterclockwise:hover {
+      transition: transform 10s ease, animation-play-state 5s ease;
+      animation-play-state: paused;
+      transform: rotate(0deg);
+      text-shadow: 2px 2px 10px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111); /* Make shadow more noticeable */
+    }
+  
+  
+
+    .header-circle{
+        max-width: 100%;
+    }
+
+
+    #phto1{
+        padding-left: 50%;
+    }
+
+
+  
+
+.dropdown-container {
+  position: fixed;
+  font-style: thin;
+  top: 0px;
+  right: 20px;
+  border: 1px solid yellowgreen;
+  z-index: 1000;
+  text-decoration: none;
+  color: rgb(231, 0, 181);
+  text-decoration: none;
+  box-shadow: none;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  padding-top: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+ 
+}
+
+.dropdown-trigger {
+  font-style: thin;
+  font-size: 22px;
+  background-color: yellowgreen;
+  height: 120px;
+ 
+  padding: 15px;
+  padding-top: 80px;
+  cursor: pointer;
+  margin-top: -100px;
+  text-decoration: none;
+  box-shadow: none;
+  border: 1px solid yellowgreen;  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+text-align: center;
+
+}
+
+.dropdown-menu {
+  padding-top: -100px;
+  display: none;
+  flex-direction: column;
+  background-color: yellowgreen;
+  
+  color: rgb(231, 0, 181);
+  text-decoration: none;
+  box-shadow: none;
+  text-align: left;
+
+
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: flex;
+  color: rgb(231, 0, 181);
+  text-decoration: none;
+  text-align: left;
+  padding: 10px;
+
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  text-decoration: none;
+  padding: 20px 0;
+  text-align: left;
+  font-size: 15px;
+  padding-left: 100px;
+  color: rgb(231, 0, 181);
+  text-align: left;
+  padding: 10px;
+
+}
+
+#ketis-link,
+#ketis-link:visited,
+#ketis-link:hover,
+#ketis-link:active,
+#ketis-link:focus {
+  color: rgb(231, 0, 181);
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+
+#proj1 { top: 180px; left: 200px; }
+#proj3 { top: 230px; left: 300px; }
+#proj4 { top: 610px; left: 130px; }
+#proj5 { top: 480px; left: 70px; }
+#proj6 { top: 560px; left: 280px; } /* already styled */
+#proj7 { top: 260px; left: 20px; }
+@media (min-width: 768px) {
+  .project:hover .preview {
+    display: block;
+    top: -480px;
+    left: 190%;
+    width: 580%;
+  }
+
+  #hover-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .project:hover ~ #hover-line line {
+    x1: 280;
+    y1: 580;
+    x2: 50;
+    y2: 580;
+  }
+}
+
+@media (max-width: 767px) {
+  .project:hover .preview {
+    display: block;
+    top: -160px;
+    left: -20px;
+  }
+
+  #hover-line {
+    display: none;
+  }
+}
+
+.project .preview {
+  display: none;
+  position: absolute;
+  width: 200px;
+  border: 2px solid rgb(255, 0, 204);
+  z-index: 3;
+  background: white;
+}
+.project {
+  position: absolute;
+  background-color:  rgb(255, 234, 245);
+  padding: 10px;
+  border: 1px solid hotpink;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  font-weight: 400;
+  color: rgb(255, 0, 128); /* already correct if present */
+}
+
+.project:hover {
+  border-color: rgb(255, 0, 204);
+  box-shadow: 0 0 15px rgba(255, 0, 204, 0.5);
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.project:hover,
+.project .preview {
+  color: hotpink;
+}
+
+.project,
+.project * {
+  color: hotpink !important;
 }
