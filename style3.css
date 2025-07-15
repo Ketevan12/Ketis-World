@@ -199,11 +199,11 @@ img {
     text-align: left;
 
     font-size: .8rem;
-    line-height: 1.0rem;
+    line-height: .9rem;
     color:  rgb(0, 0, 0);
-    padding: 5px;
+    padding: 2px;
     box-sizing: border-box;
-    width: 270px;
+    width: 280px;
 
 
   }
