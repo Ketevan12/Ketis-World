@@ -3,120 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://use.typekit.net/ieq3xfx.css">
-<link rel="stylesheet" href="https://use.typekit.net/wvl4sge.css">
-  
-<title>Keti's World</title>
+  <title>Keti's World</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ieq3xfx.css">
+  <link rel="stylesheet" href="https://use.typekit.net/wvl4sge.css">
+  <link rel="stylesheet" href="style.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+  <!-- Splash Screen -->
+  <div class="splash-screen" id="splash">
+    <svg id="splash-svg" version="1.1" width="600px" height="600px" viewBox="0 0 300 300" xml:space="preserve">
+      <defs>
+        <path id="innerCirclePath" d="M 150, 150 m -100, 0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"/>
+        <path id="outerCirclePath" d="M 150, 150 m -130, 0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0"/>
+      </defs>
 
-    <header>
-      <div class="splash-screen" id="splash">
-        <div class="corner-text" id="splash2">
-          Welcome to Keti's World!
-        </div>
-        <svg id="splash-svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="600px" height="600px" viewBox="0 0 300 300" xml:space="preserve">
-  
-        <defs>
-          <path id="innerCirclePath" d="M 150, 150 m -100, 0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"/>
-          <path id="outerCirclePath" d="M 150, 150 m -130, 0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0"/>
-        </defs>
-  
-        <circle cx="150" cy="150" r="100" fill="none" stroke="black" stroke-width="0"/>
-        <circle cx="150" cy="150" r="130" fill="none" stroke="black" stroke-width="0"/>
-  
-        <g id="rotating-text-clockwise">
-          <text font-size="20" fill="rgb(255, 0, 204)">
-            <textPath xlink:href="#innerCirclePath" startOffset="0%">
-              ++++++++++++++++++++KETI'S++++++++++++++++++++++++++++++++++++++++++++++++++++++..Projects....Projects....Projects....  
-            </textPath>
-          </text>
-        </g>
-  
-        <g id="rotating-text-counterclockwise">
-          <text font-size="20.4" fill="rgb(255, 0, 204)">
-            <textPath xlink:href="#outerCirclePath" startOffset="0%">
-              **************WORLD********************************************************************************************************************************************
-            </textPath>
-          </text>
-        </g>
-      </svg>
-      </div>
-      
-     
-   <title>Ketis world</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<div class="wrap">
-<div class="grid-wrapper">
-   <div class="row"> 
-      <div class="column">
-        <a href="ThePerfectHuman.html" >
-          <img src="cover for perfect human.png" style="width:100%">
-      </a>
+      <circle cx="150" cy="150" r="100" fill="none" stroke="black" stroke-width="0"/>
+      <circle cx="150" cy="150" r="130" fill="none" stroke="black" stroke-width="0"/>
 
-        <a href="Routines.html" >
-          <img src="nin5.jpg" style="width:100%">
-      </a>
-      <a href="The smell of the sun.html" >
-        <img src="000591510037.png" style="width:100%">
-        </a>
+      <g id="rotating-text-clockwise">
+        <text font-size="20" fill="rgb(255, 0, 204)">
+          <textPath xlink:href="#innerCirclePath" startOffset="0%">
+            ++++++++++++++++++++KETI'S++++++++++++++++++++++++++++++++++++++++++++++++++++++..Projects....Projects....Projects....  
+          </textPath>
+        </text>
+      </g>
 
-             </div>
-      <div class="column">
-        <a href="The smell of the sun.html" >
-          <img src="000591500011.png" style="width:100%">
-          </a>
-          <a href="synth.html" >
-            <img src="synth cover.png" style="width:100%">
-            </a>
-            <a href="Studio photography.html" >
-              <img src="IMG_3080.jpg" style="width:100%">
-              </a>
-
-      </div>  
-      <div class="column">
-        <a href="SOA.html" >
-          <img src="IMG_9663.jpg" style="width:100%">
-      </a>
-      <a href="ThePerfectHuman.html" >
-        <img src="IMG_9614-Enhanced-NR-Recovered.jpg" style="width:100%">
-    </a>
-      
-        <a href="Posters.html" >
-          <img src="Final posters (dragged).png" style="width:100%">
-      </a>
-       
-
-        </div>  
-      </div>
-    </div>
+      <g id="rotating-text-counterclockwise">
+        <text font-size="20.4" fill="rgb(255, 0, 204)">
+          <textPath xlink:href="#outerCirclePath" startOffset="0%">
+            **************WORLD********************************************************************************************************************************************
+          </textPath>
+        </text>
+      </g>
+    </svg>
   </div>
-</div>
-      
-<div class="dropdown-container">
-  <button class="dropdown-trigger"> <a href="index.html" id="ketis-link">Keti's World</a></button>
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown-container">
+    <button class="dropdown-trigger">
+      <a href="index.html" id="ketis-link">Keti's World</a>
+    </button>
     <div class="dropdown-menu">
-     <a id="ok"  href="projects.html" id="ketis-link">Work</a>
-     <a id="ok"  href="about.html" id="ketis-link">About</a>
+      <a href="projects.html">Work</a>
+      <a href="about.html">About</a>
     </div>
   </div>
-</div>
 
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Hub in center -->
+    <div id="brain-container">
+      <div id="all-work" class="hub">
+        ★   </div>
+    </div>
 
-<body>
+    <!-- Connection Lines -->
+    <svg id="connection-lines"></svg>
+
+    <!-- Rotating Images -->
+    <div class="rotating-container" id="toggleDiv">
+      <div class="circular-grid-container">
+
+        <div class="grid-cell"><a href="ThePerfectHuman.html"><img src="first spread.jpg" alt="The Perfect Human"></a></div>
+        <div class="grid-cell"><a href="SOA.html"><img src="IMG_9710.jpg" alt="Strings of Attachment"></a></div>
+        <div class="grid-cell"><a href="Routines.html"><img src="nin2.jpg" alt="Routines"></a></div>
+        <div class="grid-cell"><a href="The smell of the sun.html"><img src="000591510037.png" alt="The smell of the sun"></a></div>
+        <div class="grid-cell"><a href="Studio photography.html"><img src="IMG_3205.jpg" alt="Studio photography"></a></div>
+        <div class="grid-cell"><a href="synth.html"><img src="synth cover.png" alt="Synth"></a></div>
 
       </div>
     </div>
- 
-
-
-   
-
-    </main>
   </div>
-  <script src="script.js"></script></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    const rotatingContainer = document.getElementById('toggleDiv');
+    const cells = document.querySelectorAll('.grid-cell');
+    const hub = document.getElementById('all-work');
+    const svg = document.getElementById('connection-lines');
+    const splash = document.getElementById('splash');
+    
+    let angleOffset = 0;
+    let radius;
+    let animationId = null;
+    let isHovered = false;
+  
+    const rotationSpeed = 0.005;
+  
+    function calculateRadius() {
+      const minDim = Math.min(window.innerWidth, window.innerHeight);
+      return minDim * 0.35;
+    }
+  
+    function drawLinesToImages() {
+      if (!hub || !svg || cells.length === 0) return;
+      svg.innerHTML = "";
+  
+      const hubRect = hub.getBoundingClientRect();
+      const hubX = hubRect.left + hubRect.width / 2;
+      const hubY = hubRect.top + hubRect.height / 2;
+  
+      cells.forEach(cell => {
+        const img = cell.querySelector("img");
+        if (!img) return;
+        const rect = img.getBoundingClientRect();
+        const imgX = rect.left + rect.width / 2;
+        const imgY = rect.top + rect.height / 2;
+  
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", hubX);
+        line.setAttribute("y1", hubY);
+        line.setAttribute("x2", imgX);
+        line.setAttribute("y2", imgY);
+        line.setAttribute("stroke", "rgb(231, 0, 181)");
+        line.setAttribute("stroke-width", "1.5");
+        line.setAttribute("stroke-opacity", "0.5");
+        svg.appendChild(line);
+      });
+    }
+  
+    function layoutCircle() {
+      radius = calculateRadius();
+      const numCells = cells.length;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+  
+      cells.forEach((cell, index) => {
+        const angle = (index / numCells) * 2 * Math.PI + angleOffset;
+        const x = centerX + radius * Math.cos(angle) - cell.offsetWidth / 2;
+        const y = centerY + radius * Math.sin(angle) - cell.offsetHeight / 2;
+        cell.style.position = 'absolute';
+        cell.style.left = `${x}px`;
+        cell.style.top = `${y}px`;
+      });
+  
+      drawLinesToImages();
+    }
+  
+    function animate() {
+      if (window.innerWidth <= 768) return; // disable rotation on mobile
+      layoutCircle();
+      if (!isHovered) angleOffset += rotationSpeed;
+      animationId = requestAnimationFrame(animate);
+    }
+  
+    // Pause rotation only when hovering over images
+    cells.forEach(cell => {
+      const img = cell.querySelector('img');
+      if (!img) return;
+      img.addEventListener('mouseenter', () => (isHovered = true));
+      img.addEventListener('mouseleave', () => (isHovered = false));
+    });
+  
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 768) {
+        cancelAnimationFrame(animationId);
+        // Reset to column layout
+        svg.style.display = "none";
+        rotatingContainer.style.position = "relative";
+        rotatingContainer.style.display = "flex";
+        rotatingContainer.style.flexDirection = "column";
+        rotatingContainer.style.alignItems = "center";
+        cells.forEach(cell => {
+          cell.style.position = "relative";
+          cell.style.left = "0";
+          cell.style.top = "0";
+          cell.style.margin = "10px 0";
+        });
+      } else {
+        svg.style.display = "block";
+        rotatingContainer.style.display = "block";
+        rotatingContainer.style.position = "absolute";
+        cancelAnimationFrame(animationId);
+        animate();
+      }
+    });
+  
+    // Splash fade then start rotation
+    window.addEventListener("load", () => {
+      document.querySelector('.dropdown-container').style.display = 'none';
+      splash.style.animation = 'fadeOut 4s ease-in-out';
+  
+      setTimeout(() => {
+        splash.style.display = "none";
+        document.querySelector('.dropdown-container').style.display = 'block';
+        rotatingContainer.classList.add('visible');
+        if (window.innerWidth > 768) animate();
+        else window.dispatchEvent(new Event("resize"));
+      }, 1000);
+    });
 
+    function stars() {
+  let e = document.createElement("div");
+  e.setAttribute("class", "star");
+  document.body.appendChild(e);
+  e.style.left = Math.random() * +innerWidth + "px";
+
+  let size = Math.random() * 2;
+  let duration = Math.random() * 3;
+
+  e.style.fontSize = 16 + "px";
+  e.style.animationDuration = 4 + duration + "s";
+  setTimeout(function () {
+    document.body.removeChild(e);
+  }, 10000);
+}
+
+setInterval(function () {
+  stars();
+}, 500);
+
+  </script>
+  
 </body>
+</html>

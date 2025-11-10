@@ -1,22 +1,19 @@
 body {
-  
+
     font-family: 'Courier New', Courier, monospace;
     font-weight: 200;
     color: #0951bd;
     min-height: 100vh;
     margin: 20;
     padding: 0;
-    background-image: url('ascii-art.png');
-    background-repeat: no-repeat;
-    background-size: cover; /* Make sure image covers fully */
+background-color: black;
+    
+
     background-position: center;
-    background-color: rgb(231, 0, 181); /* fallback if image has transparency */
     display: flex;
     align-items: center;
     justify-content: center;
-    background:rgb(233, 212, 232);
-    background-image: linear-gradient(rgba(157, 146, 255, 0.7) .1em, transparent .1em), linear-gradient(90deg, rgba(255, 170, 211, 0.7) .1em, transparent .1em);
-    background-size: .5em .5em;
+
   }
   
 
@@ -25,22 +22,23 @@ body {
     font-style: thin;
     top: 0px;
     right: 20px;
-    border: 1px solid yellowgreen;
+
     z-index: 1000;
     text-decoration: none;
-    color: rgb(231, 0, 181);
+
     text-decoration: none;
     box-shadow: none;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+   
     padding-top: 40px;
     font-family: 'Courier New', Courier, monospace;
+    
    
   }
   
   .dropdown-trigger {
     font-style: thin;
     font-size: 22px;
-    background-color: yellowgreen;
+  background-color: black;
     height: 120px;
     padding: 15px;
     padding-top: 80px;
@@ -48,7 +46,7 @@ body {
     margin-top: -100px;
     text-decoration: none;
     box-shadow: none;
-    border: 1px solid yellowgreen;  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    border: 1px solid rgb(231, 0, 181);
   
   
   }
@@ -57,19 +55,17 @@ body {
     padding-top: -100px;
     display: none;
     flex-direction: column;
-    background-color: yellowgreen;
+  
+   
     
-    color: rgb(231, 0, 181);
     text-decoration: none;
     box-shadow: none;
     text-align: left;
-  
-  
   }
   
   .dropdown-container:hover .dropdown-menu {
     display: flex;
-    color: rgb(231, 0, 181);
+
     text-decoration: none;
     text-align: left;
     padding: 10px;
@@ -86,6 +82,7 @@ body {
     color: rgb(231, 0, 181);
     text-align: left;
     padding: 10px;
+    background-color: black;
   
   }
   
@@ -118,6 +115,17 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-align: left;
   }
+
+  #ketis-link:hover {
+    text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);}
+
+
+
+
+    
+    
+
+    
   
   #ok {
   
@@ -200,21 +208,21 @@ img {
 
     font-size: .8rem;
     line-height: .9rem;
-    color:  rgb(0, 0, 0);
+    color:   rgb(231, 0, 181); 
     padding: 2px;
     box-sizing: border-box;
     width: 280px;
 
 
   }
-  .main-content {
+  .main-content { border: 1px solid rgb(231, 0, 181); 
     font-family: monospace;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
-    background-color:yellowgreen; /* optional, makes text readable */
+    background-color:black; /* optional, makes text readable */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
   }
@@ -238,9 +246,7 @@ img {
 
  
   #info1{
-
     margin-bottom: 5px;
-
     text-align: right;
  font-size: .5rem;
     padding: 8px;
@@ -256,3 +262,35 @@ img {
     padding-top: -10px;
 
   }
+  
+  .star {
+    position: absolute;
+    top: -20px;
+  color: black;
+    animation: animate 5s linear forwards;
+    /* you can set infinite too */
+  }
+  
+  .star::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    text-shadow: 0 0 5px rgb(231, 0, 181), 0 0 20px #fff, 0 0 50px rgb(231, 0, 181);
+  }
+  
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  

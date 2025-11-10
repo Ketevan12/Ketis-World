@@ -2,31 +2,14 @@
 body {
   font-family: "lores-22-serif", sans-serif;
   margin-top: -10px; /* valid, though negative margins can be tricky */
-  padding: 0; /* negative padding is invalid, so reset to 0 */
-
-  background-color: rgb(255, 234, 245);
+  padding: 0;
+  background-color: rgb(0, 0, 0);
   color: rgb(255, 0, 204);
   font-family: "birch-std", serif;
   font-weight: 400;
   font-style: normal;
 }
   
-  .birch-stdt-regular {
-    font-family: "birch-std", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .pixelify-sans {
-    font-family: "lores-22-serif", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-.jacquard-12-regular {
-    font-family: "Jacquard 12", serif;
-    font-weight: 50;
-    font-style: normal;
-}
 
 #contain {
     margin-top: -10;
@@ -86,7 +69,7 @@ section {
 
 #shadow {
     text-decoration: none;
-    fill: rgba(242, 201, 255, 1);
+    color: rgb(231, 0, 181);
     transition: text-shadow 0.3s ease-in-out;
 }
 
@@ -330,11 +313,11 @@ section {
     max-height: 60vh;
     font-family: monospace;
     justify-items: baseline;
-    color:hotpink;
+    color:rgb(0, 0, 0);
   
     margin: 80px auto;
     margin-left: 20px;
-    border: 1px solid hotpink;
+    border: 1px solid rgb(231, 0, 181);;
     padding: 15px;
     text-align: justify;
 
@@ -467,12 +450,13 @@ height: 42rem;
     position: absolute;
     width: 180px;
     height: 50px;
-    background:rgb(255, 234, 245);
+    background:black;
     text-align: center;
     line-height: 50px;
     font-weight: bold;
-    border: 1px solid hotpink;
-    color:hotpink;
+    border: 1px solid  rgb(255, 0, 204);;
+    color: rgb(255, 0, 204);
+ 
   }
 
   #box1 {
@@ -494,7 +478,7 @@ height: 42rem;
   #proj1 {
     top: 180px;
     left: 200px;   
-    color: rgb(0, 255, 21);
+
     
   }
   #proj1:hover {
@@ -738,7 +722,7 @@ height: 42rem;
   }
   
   #proj6:hover {
-    border-color: rgb(255, 0, 204);
+    border-color:  rgb(255, 0, 204);;
     box-shadow: 0 0 15px rgba(255, 0, 204, 0.5);
     transform: scale(1.02);
     z-index: 2;
@@ -777,7 +761,7 @@ height: 42rem;
     }
   }
   
-  /* Small screens: show image near the text */
+
   @media (max-width: 767px) {
     #proj6:hover .preview {
       display: block;
@@ -795,7 +779,7 @@ height: 42rem;
     top: 260px;
     left: 20px;
     z-index: 99;
-    color: hotpink;
+    color:  color: rgb(255, 0, 204);;
   }
   #proj7 .preview {
     display: none;
@@ -848,6 +832,7 @@ height: 42rem;
   
     #hover-line {
       display: none;
+
     }
   }
   
@@ -857,69 +842,15 @@ height: 42rem;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Send behind boxes */
+    z-index: -1;
+  
   }
   
-  #circle {
-        position: absolute;
-        top: 50%;
-        right: -90%;
-        width: 80px; /* Smaller width */
-        height: -200px; /* Smaller height */
-        transform: none; /* Remove center transform */
-      
-  }
-  
+
   
   .shadow:hover {
   
     text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);}
-  
-  
-  /* Inner text rotates clockwise */
-  #rotating-text-clockwise {
-    animation: rotate-clockwise 10s linear infinite;
-    transform-origin: 150px 150px; /* Center of the SVG */
-  }
-  
-  
-  /* Outer text rotates counterclockwise */
-  #rotating-text-counterclockwise {
-    animation: rotate-counterclockwise 15s linear infinite;
-    transform-origin: 150px 150px; /* Center of the SVG */
-  }
-  
-  @keyframes rotate-clockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes rotate-counterclockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-  }
-  #rotating-text-clockwise text,
-  #rotating-text-counterclockwise text {
-     /* Remove underline */
-    fill: rgb(231, 0, 181);        /* Ensure text is visible */
-  }
-  
-  #rotating-text-clockwise textPath,
-  #rotating-text-counterclockwise textPath {
-     /* Remove underline from textPath */
-  }
-  
-    
-
-
   
   
   @keyframes scroll-text {
@@ -932,25 +863,9 @@ height: 42rem;
   
   #ketis-link:hover {
      
-    text-shadow: 2px 2px 5px rgb(9, 81, 189), -2px -2px 5px rgb(9, 81, 189), 2px -2px 5px rgb(9, 81, 189), -2px 2px 5px rgb(9, 81, 189);
   }
   
-    #rotating-text-clockwise:hover {
-      transition: transform 10s ease, animation-play-state 5s ease;
-      animation-play-state: paused;
-      transform: rotate(0deg);
-      text-shadow: 2px 2px 10px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111); /* Make shadow more noticeable */
-   
-       }
-    
-    #rotating-text-counterclockwise:hover {
-      transition: transform 10s ease, animation-play-state 5s ease;
-      animation-play-state: paused;
-      transform: rotate(0deg);
-      text-shadow: 2px 2px 10px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111); /* Make shadow more noticeable */
-    }
-  
-  
+
 
     .header-circle{
         max-width: 100%;
@@ -969,13 +884,13 @@ height: 42rem;
   font-style: thin;
   top: 0px;
   right: 20px;
-  border: 1px solid yellowgreen;
+
   z-index: 1000;
   text-decoration: none;
   color: rgb(231, 0, 181);
   text-decoration: none;
   box-shadow: none;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  
   padding-top: 40px;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
@@ -985,7 +900,7 @@ height: 42rem;
 .dropdown-trigger {
   font-style: thin;
   font-size: 22px;
-  background-color: yellowgreen;
+  background-color: rgb(0, 0, 0);
   height: 120px;
  
   padding: 15px;
@@ -994,7 +909,7 @@ height: 42rem;
   margin-top: -100px;
   text-decoration: none;
   box-shadow: none;
-  border: 1px solid yellowgreen;  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  border: 1px solid rgb(231, 0, 181);
 text-align: center;
 
 }
@@ -1003,9 +918,9 @@ text-align: center;
   padding-top: -100px;
   display: none;
   flex-direction: column;
-  background-color: yellowgreen;
+
   
-  color: rgb(231, 0, 181);
+
   text-decoration: none;
   box-shadow: none;
   text-align: left;
@@ -1101,9 +1016,9 @@ text-align: center;
 }
 .project {
   position: absolute;
-  background-color:  rgb(255, 234, 245);
+  background-color:  black;
   padding: 10px;
-  border: 1px solid hotpink;
+  border: 1px solid rgb(255, 0, 204);;
   transition: all 0.3s ease-in-out;
   z-index: 1;
   font-weight: 400;
@@ -1119,18 +1034,18 @@ text-align: center;
 
 .project:hover,
 .project .preview {
-  color: hotpink;
+  color: rgb(255, 0, 204);
 }
 
 .project,
 .project * {
-  color: hotpink !important;
+  color: rgb(255, 0, 204);
 }
 
 #ok {
 
   margin-bottom: 5px;
-  border: .5px solid rgb(231, 0, 181);
+  border: .5px solid rgb(255, 0, 204);
   text-align: right;
   padding: 8px;
   padding-top: -10px;

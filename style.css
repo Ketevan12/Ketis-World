@@ -8,10 +8,9 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background-color: rgb(233, 212, 232);
-  background:rgb(233, 212, 232);
-  background-image: linear-gradient(rgba(157, 146, 255, 0.7) .1em, transparent .1em), linear-gradient(90deg, rgba(255, 170, 211, 0.7) .1em, transparent .1em);
+  background-color: rgb(0, 0, 0);
   background-size: .5em .5em;
+
 }
 
 /* Dropdown container & menu */
@@ -20,13 +19,13 @@ body {
   font-style: thin;
   top: 0px;
   right: 20px;
-  border: 1px solid yellowgreen;
+
   z-index: 1000;
   text-decoration: none;
   color: rgb(231, 0, 181);
   text-decoration: none;
   box-shadow: none;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+
   padding-top: 40px;
   font-family: 'Courier New', Courier, monospace;
  
@@ -35,16 +34,15 @@ body {
 .dropdown-trigger {
   font-style: thin;
   font-size: 22px;
-  background-color: yellowgreen;
+  background-color: black;
   height: 120px;
- 
   padding: 15px;
   padding-top: 80px;
   cursor: pointer;
   margin-top: -100px;
   text-decoration: none;
   box-shadow: none;
-  border: 1px solid yellowgreen;  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  border: 1px solid rgb(231, 0, 181);  
 
 
 }
@@ -53,7 +51,6 @@ body {
   padding-top: -100px;
   display: none;
   flex-direction: column;
-  background-color: yellowgreen;
   
   color: rgb(231, 0, 181);
   text-decoration: none;
@@ -72,7 +69,7 @@ body {
 
 }
 
-/* Dropdown links */
+
 .dropdown-menu a {
   text-decoration: none;
   padding: 20px 0;
@@ -82,11 +79,12 @@ body {
   color: rgb(231, 0, 181);
   text-align: left;
   padding: 10px;
+  background-color: black;
 
 }
 
 
-/* Font classes */
+
 .bitcount-grid-single-square { font-family: "bitcount-grid-single-square", sans-serif; font-weight: 500; }
 .birch-stdt-regular { font-family: "birch-std", serif; font-weight: 400; }
 .pixelify-sans { font-family: "lores-22-serif", sans-serif; font-weight: 700; }
@@ -107,6 +105,7 @@ body {
   z-index: 999;
   font-size: 5px;
   transition: opacity 1s ease-in-out;
+  background-color: black;
 }
 
 .corner-text {
@@ -125,14 +124,15 @@ svg {
 }
 
 #splash {
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   font-size: 15px;
-  background-color: black;
+  z-index: 20;
+
 }
 
 #splash2 {
@@ -142,7 +142,6 @@ svg {
   align-items: center;
   text-align: center;
   font-size: 15px;
-
 }
 .in {
   display: flex;
@@ -161,29 +160,27 @@ svg {
   font-weight: thin;
   box-shadow: black;
   font-family: monospace;
-
 text-decoration: wavy;
   padding-left: 10px;
   text-shadow: -2px 2px 5px rgb(9, 81, 189), -2px -2px 5px rgb(9, 81, 189), 2px -2px 5px rgb(9, 81, 189), -2px 2px 5px rgb(9, 81, 189);
 }
+
 #container {
-  position: sticky;
-  top: 470px;
+  position: fixed;
   left: 0;
   width: auto;
   height: auto;
-
   background-color: rgba(172, 255, 47, 0.461);
-  border-radius: 60%; /* optional for rounded base */
+  border-radius: 60%; 
    border-radius: 100%;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
  
 }
 
 #circle {
-  width: 20vw;              /* 14% of viewport width */
-  height: 20vw;             /* Keep it a perfect circle */
-  max-width: none;          /* Remove fixed size restrictions */
+  width: 20vw;              
+  height: 20vw;         
+  max-width: none;       
   max-height: none;
   display: flex;
   justify-content: center;
@@ -193,12 +190,12 @@ text-decoration: wavy;
 
 }
 
-/* Hover text shadow */
+
 .shadow:hover {
   text-shadow: 2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);
 }
 
-/* Rotating text animation */
+
 @keyframes rotate-clockwise {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -219,7 +216,6 @@ text-decoration: wavy;
 
 #rotating-text-clockwise { animation: rotate-clockwise 10s linear infinite; }
 #rotating-text-counterclockwise { animation: rotate-counterclockwise 15s linear infinite; }
-
 #rotating-text-clockwise:hover,
 #rotating-text-counterclockwise:hover {
   animation-play-state: paused;
@@ -230,27 +226,76 @@ text-decoration: wavy;
 
 
 
-/* Popup */
-.popup {
-  display: none;
+.dropdown-container {
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  font-style: thin;
+  top: -13px;
+  right: 20px;
+
+  z-index: 1000;
+  text-decoration: none;
+
+  text-decoration: none;
+  box-shadow: none;
+ 
+  padding-top: 40px;
+  font-family: 'Courier New', Courier, monospace;
+ 
 }
 
-.popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20%;
-  height: 25%;
-  background-color: rgba(242, 201, 255, 1);
-  padding: 10px;
+.dropdown-trigger {
+  font-style: thin;
+  font-size: 22px;
+background-color: black;
+  height: 120px;
+  padding: 15px;
+  padding-top: 80px;
+  cursor: pointer;
+  margin-top: -100px;
+  text-decoration: none;
+  box-shadow: none;
+  border: 1px solid rgb(231, 0, 181);
+
+
 }
+
+.dropdown-menu {
+  padding-top: -100px;
+  display: none;
+  flex-direction: column;
+
+  
+  text-decoration: none;
+  box-shadow: none;
+  text-align: left;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: flex;
+
+  text-decoration: none;
+  text-align: left;
+  padding: 10px;
+
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  text-decoration: none;
+  padding: 20px 0;
+  text-align: left;
+  font-size: 15px;
+  padding-left: 100px;
+  color: rgb(231, 0, 181);
+  text-align: right;
+  padding: 10px;
+  background-color: black;
+  border: .5px solid rgb(231, 0, 181);
+  margin-bottom: 5px;
+
+}
+
+
 
 
 
@@ -268,7 +313,6 @@ text-decoration: wavy;
 }
 
 #ok {
-
   margin-bottom: 5px;
   border: .5px solid rgb(231, 0, 181);
   text-align: right;
@@ -276,70 +320,240 @@ text-decoration: wavy;
   padding-top: -10px;
 }
 
-.wrap {
+  #ketis-link:hover {
+    text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);}
 
-  position: absolute;
-  width: 80%;
-  /* top: 25%; */
-  top:10px;
-  left:10px;
-}
 
-.grid-wrapper {
-  width: 80%;      /* 100vw - 20% left - 20% right */
-  height: 60vh;       /* Optional: adjust based on needs */
-  /*margin: auto;   20% top & bottom, center horizontally */
-  box-sizing: border-box;
-  /* overflow: auto; */
-  margin-left: 30%;
-  position: relative;
+
+
+   
+    
+    
+    
+
+  
+.rotating-container {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  position: fixed;
+  display: none;
+  z-index: 2;
+    transform: translate(-70%, -75%);
+    width: 1000px;
+    height: 500px;
+    margin-right: -100px;
+  }
   
 
+
+.rotating-container.visible {
+  display: block;
 }
 
-.row {
+#brain-container {
+  position: fixed;
+  top: 40%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  text-shadow:  rgb(231, 0, 181);
+}
+
+
+#brain {
+  width: 100px;
+  height: auto;
+  color:  rgb(231, 0, 181);
+  background-color: black;
+  text-shadow:  rgb(231, 0, 181);
+}
+
+
+.brain-label {
+  margin-top: 2px;
+  color:  rgb(231, 0, 181);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+}
+
+
+
+
+.circular-grid-container {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+}
+
+
+.grid-cell {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+
+.grid-cell img {
   width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  transform: scale(0.5); 
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+
+
+.grid-cell:hover {
+  position: relative;
+  transform: scale(1.6);
+  z-index: 10;
+}
+
+
+#connection-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  color:  rgb(231, 0, 181);  
+
+}/* Center brain hub */
+#brain-container {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  color:rgb(231, 0, 181);
+  font-size: 100px;
+  text-shadow: rgb(231, 0, 181);
+  text-shadow: 0 0 5px rgb(231, 0, 181), 0 0 20px rgba(0, 255, 0, 0.4), 0 0 50px rgb(231, 0, 181);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.star {
+  position: absolute;
+  top: -20px;
+
+  animation: animate 5s linear forwards;
+  /* you can set infinite too */
+}
+
+.star::before {
+  content: "\f005";
+  font-family: FontAwesome;
+  text-shadow: 0 0 5px rgb(231, 0, 181), 0 0 20px #fff, 0 0 50px rgb(231, 0, 181);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* --- Responsive layout for mobile --- */
+@media (max-width: 768px) {
+  #brain-container,
+  #connection-lines {
+    display: none !important;
+  }
+
+  .rotating-container {
+    position: relative;
+    width: 100%;
+    margin-top: -300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .grid-cell {
+    position: relative;
+    width: 5%;
+    height: auto;
+    margin: -14%;
+    overflow: visible;
+  }
+
+  .grid-cell img {
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(231, 0, 181);
+  }
+}
+
+@media (max-width: 768px) {
+  .rotating-container {
+    position: fixed;
+    width: 100px;
+    height: auto;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .grid-cell {
+    position: fixed;
+    width: 100%;
+    height: auto;
+   
+  }
+
+  .grid-cell img {
+    width: 100%;
+    border: 1px solid rgb(231, 0, 181);
+  }
+
+  #connection-lines {
+    display: none !important;
+  }
+}
+
+
+.splash-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px; 
-
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-size: 5px;
+  transition: opacity 1s ease-in-out;
+  background-color: black;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 10px;
-
-
-}
-
-.column img {
-  margin-top: 15px;
-  vertical-align: middle;
-  width: 100%;
-  padding: 10px;
-
-}
-
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 #splash-svg {
   cursor: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='yellowgreen'>\
 <path d='M12 .587l3.668 7.431L24 9.75l-6 5.847 1.42 8.288L12 18.896 4.58 23.885 6 15.597 0 9.75l8.332-1.732z'/>\
 </svg>") 16 16, auto;
 }
+
+

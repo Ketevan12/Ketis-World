@@ -233,3 +233,23 @@ window.addEventListener("DOMContentLoaded", () => {
       line.style.display = 'none';
     });
   });
+  function stars() {
+    let e = document.createElement("div");
+    e.setAttribute("class", "star");
+    document.body.appendChild(e);
+    e.style.left = Math.random() * +innerWidth + "px";
+  
+    let size = Math.random() * 2;
+    let duration = Math.random() * 3;
+  
+    e.style.fontSize = 16 + "px";
+    e.style.animationDuration = 4 + duration + "s";
+    setTimeout(function () {
+      document.body.removeChild(e);
+    }, 10000);
+  }
+  
+  setInterval(function () {
+    stars();
+  }, 500);
+  

@@ -14,17 +14,15 @@ function startImageFlicker() {
   }, 500);
 }
 
-function removeSplash() {
-  const splash = document.getElementById('splash');
-  splash.style.animation = 'fadeOut 1s ease-in-out';
-  setTimeout(() => splash.remove(), 2000);
-}
 
 function removeSplash() {
     const splash = document.getElementById('splash');
     splash.style.animation = 'fadeOut 1s ease-in-out';
     setTimeout(() => splash.style.display = "none", 1000);
 }
+
+document.getElementById('splash').addEventListener('click', removeSplash);
+
 
 
 window.onload = function () {
@@ -365,3 +363,98 @@ runner();
   });
 
   localStorage.removeItem('splashDismissed');
+
+  const showWarningInChromiumWithNoSupport = () => {
+    if (!navigator.userAgentData || !navigator.userAgentData.brands) return;
+  
+    const chromium = navigator.userAgentData.brands.filter(
+      (b) => b.brand == "Chromium"
+    );
+    if (!chromium) return;
+  
+    if (chromium[0].version >= 107) return;
+    document.querySelector(".warning").style.display = "block";
+  };
+  
+  showWarningInChromiumWithNoSupport();
+
+  const folderSvg = document.getElementById('folder-svg');
+  const container = document.getElementById('image-container');
+  const cells = container.querySelectorAll('.cell');
+  let isOpen = false;
+
+  // Store initial positions inside folder
+  const initialPositions = [];
+  cells.forEach(cell => {
+    initialPositions.push({
+      top: cell.style.top,
+      left: cell.style.left
+    });
+  });
+
+  folderSvg.addEventListener('click', () => {
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    const radius = 150;
+    const total = cells.length;
+
+    cells.forEach((cell, index) => {
+      if (!isOpen) {
+        // Calculate circular positions relative to window center
+        const angle = (index / total) * 2 * Math.PI;
+        const x = centerX + radius * Math.cos(angle) - 25; // 25 = half img width
+        const y = centerY + radius * Math.sin(angle) - 25;
+        cell.style.position = 'fixed';
+        cell.style.left = `${x}px`;
+        cell.style.top = `${y}px`;
+      } else {
+        // Return to initial positions inside folder
+        cell.style.position = 'absolute';
+        cell.style.top = initialPositions[index].top;
+        cell.style.left = initialPositions[index].left;
+      }
+    });
+
+    isOpen = !isOpen;
+  });
+
+  let splashFinished = false;
+
+  setTimeout(() => {
+    document.querySelector('.splash-screen').style.display = 'none';
+    splashFinished = true;
+  }, 3000);
+  
+  document.addEventListener("keydown", (event) => {
+    if (splashFinished && event.code === "Space") {
+      showHide();
+    }
+  });
+  
+  document.querySelectorAll('.grid-cell img').forEach(img => {
+    img.addEventListener('mouseenter', () => {
+      // Pause animation of the container
+      const container = img.closest('.grid-cell');
+      if (container) container.style.animationPlayState = 'paused';
+  
+      // Show all images within the same link
+      const link = img.closest('#ketis-link');
+      if (link) {
+        link.querySelectorAll('img').forEach(i => i.style.display = 'block');
+      }
+    });
+  
+    img.addEventListener('mouseleave', () => {
+      const container = img.closest('.grid-cell');
+      if (container) container.style.animationPlayState = 'running';
+  
+      const link = img.closest('#ketis-link');
+      if (link) {
+        // Hide all images except the first one again
+        link.querySelectorAll('img').forEach((i, idx) => {
+          i.style.display = (idx === 0) ? 'block' : 'none';
+        });
+      }
+    });
+  });
+  
