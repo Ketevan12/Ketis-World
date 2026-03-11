@@ -9,6 +9,7 @@ body {
   min-height: 100vh;
   background-size: .5em .5em;
   font-family: "input-mono", serif;
+  
   background-color: rgb(252, 244, 244);
   position: fixed;
 }
@@ -29,7 +30,7 @@ font-style: normal;
 }
 
   .dropdown-trigger {
-    font-size: 28px;
+    font-size: 28px;  font-family: 'Cairopixel', sans-serif;
     height: 100px;
     width: 100px;
     border-radius: 50%;

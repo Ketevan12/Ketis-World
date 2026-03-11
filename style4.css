@@ -24,7 +24,7 @@ body {
   z-index: 10;
 }
 
-.dropdown-trigger {
+.dropdown-trigger {  font-family: 'Cairopixel', sans-serif;
   font-size: 28px;
   height: 100px;
   width: 100px;

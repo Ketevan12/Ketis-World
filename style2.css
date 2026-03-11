@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   background-size: .5em .5em;
   font-family: "input-mono", serif;
+  
   background-color:rgb(252, 244, 244);
 
 }
@@ -28,7 +29,7 @@ font-style: normal;
   text-align: center;
 }
 
-  .dropdown-trigger {
+  .dropdown-trigger {  font-family: 'Cairopixel', sans-serif;
     font-size: 28px;
     height: 100px;
     width: 100px;
