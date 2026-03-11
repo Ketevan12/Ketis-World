@@ -6,7 +6,6 @@
 @import url("https://use.typekit.net/ylt6wmi.css");
 @import url("https://use.typekit.net/hmf7fjw.css");
 @import url("https://use.typekit.net/ovz5wmn.css");
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 body { 
   display: grid;
@@ -26,7 +25,7 @@ body {
 }
 
 .dropdown-trigger {
-  font-size: 25px;
+  font-size: 28px;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -36,8 +35,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 20px;
-  z-index: 9999;
+  line-height: 15px;
 }
 
 .dropdown-trigger:hover {
