@@ -252,4 +252,10 @@ window.addEventListener("DOMContentLoaded", () => {
   setInterval(function () {
     stars();
   }, 500);
-  
+
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('enlarged');
+  });
+});
+

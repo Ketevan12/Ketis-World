@@ -1,0 +1,219 @@
+@import url("https://use.typekit.net/ylt6wmi.css");
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url("https://use.typekit.net/hmf7fjw.css");
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://use.typekit.net/ovz5wmn.css");
+@import url("https://use.typekit.net/ylt6wmi.css");
+@import url("https://use.typekit.net/hmf7fjw.css");
+@import url("https://use.typekit.net/ovz5wmn.css");
+
+body { 
+  display: grid;
+  min-height: 100vh;
+  font-family: "input-mono", monospace;
+  background-color: rgb(252, 244, 244);
+}
+
+/* ---------- Dropdown ---------- */
+
+.dropdown-container {
+  position: fixed;
+  right: 20px;
+  padding-top: 15px;
+  text-align: center;
+  z-index: 10;
+}
+
+.dropdown-trigger {
+  font-size: 28px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1.2px solid rgb(189, 9, 111);
+  background-color: rgb(252, 244, 244);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 15px;
+}
+
+.dropdown-trigger:hover {
+  box-shadow:
+    2px 2px 5px rgb(151, 255, 239),
+   -2px -2px 5px rgb(151, 255, 239),
+    2px -2px 5px rgb(151, 255, 239),
+   -2px 2px 5px rgb(151, 255, 239);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 99%;
+  left: 57%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-connector {
+  position: absolute;
+  pointer-events: none;
+}
+
+.dropdown-connector line {
+  stroke: rgb(189, 9, 111);
+  stroke-width: 1;
+}
+
+
+#ketis-link,
+#ketis-link:visited,
+#ketis-link:hover,
+#ketis-link:active,
+#ketis-link:focus {
+  color: rgb(189, 9, 111);
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  font-family: "Cairopixel";
+}
+
+#ketis-link:hover {
+  text-shadow:
+    2px 2px 5px rgb(189, 9, 111),
+   -2px -2px 5px rgb(189, 9, 111),
+    2px -2px 5px rgb(189, 9, 111),
+   -2px 2px 5px rgb(189, 9, 111);
+}
+
+
+
+
+#ok {
+    border: 1px solid rgb(189, 9, 111);
+    z-index: 1000;
+    width: max-content;
+    text-align: center;
+    padding: 5px;
+    background: rgb(252, 244, 244);
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(189, 9, 111);
+    font-family: "input-mono", monospace;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 40px;
+    z-index: 10000;
+  }
+#ok:hover {
+  box-shadow:
+    2px 2px 5px rgb(151, 255, 239),
+   -2px -2px 5px rgb(151, 255, 239),
+    2px -2px 5px rgb(151, 255, 239),
+   -2px 2px 5px rgb(151, 255, 239);
+}
+
+
+#text {
+    max-height: 60vh;
+  margin-top: 10px;
+  font-family: "input-mono", monospace;
+  color:rgb(189, 9, 111);
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid rgb(189, 9, 111);
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+#text4 {
+  font-size: 85%;
+  width: 40%;
+  max-height: 60vh;
+  color: rgb(0, 0, 0);
+  margin-left: 20px;
+  padding: 10px;
+  margin-bottom: 100px;
+  margin-top: 10px;
+ 
+}
+
+
+#imgGrid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows, height adjusts based on content */
+    gap: 40px; /* Space between images */
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* Adjust width */
+    height: 90%;
+    margin: 5 auto; /* Center the grid container */
+    padding: 0px;
+    margin-top: -65px;
+}
+@media (max-width: 500px) {
+  #imgGrid2 {
+    grid-template-columns: 1fr;
+    width: 50%;
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
+
+/* images */
+
+#imgGrid2 img,
+#imgGrid2 video {
+  width: 400px;       /* adjust to how small you want */
+  height: auto;       /* maintain aspect ratio */
+  object-fit: contain; /* show full image/video without cropping */
+  cursor: pointer;
+  transition: all 0.45s ease;
+  margin: 5px;        /* optional spacing between items */
+}
+
+.img-item:hover {
+  transform: scale(1.2);
+  box-shadow:
+    2px 2px 5px rgb(151, 255, 239),
+   -2px -2px 5px rgb(151, 255, 239),
+    2px -2px 5px rgb(151, 255, 239),
+   -2px 2px 5px rgb(151, 255, 239);
+  z-index: 3;
+}
+
+/* enlarged image */
+
+#imgGrid2 img.enlarged {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  z-index: 19;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

@@ -4,182 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Keti's World</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-  
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: black;
-      font-family: "Bitcount Prop Double", sans-serif;
-
-
-    }
-
-    .bitcount-prop-double {
-      font-family: "Bitcount Prop Double", sans-serif;
-      font-optical-sizing: auto;
-  font-weight: 400;
-
-  font-style: normal;}
-    
- 
-    .splash-screen {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      width: 100vw;
-      cursor: pointer;
-      font-family: "Bitcount Prop Double", sans-serif;
-      transition-timing-function: ease-out;
-      
-    }
-
-
-    #splash-svg {
-      width: 600px;
-      height: 600px;
-    }
-
-  
-
-    #cw {
-      animation: spinCW 18s linear infinite;
-      transform-origin: center;
-      transform-origin: 150px 150px;
-      font-family: "Bitcount Prop Double", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 140; }
-    
-
-
-    #ccw {
-      animation: spinCCW 26s linear infinite;
-      transform-origin: center;
-      font-family: "Bitcount Prop Double", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 140; 
-}
-
-    @keyframes spinCW {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
-
-    @keyframes spinCCW {
-      from { transform: rotate(360deg); }
-      to   { transform: rotate(0deg); }
-    }
-
-
-    .star {
-      position: fixed;
-      top: -10px;
-      color: rgb(255, 0, 204);
-      animation: fall linear forwards;
-      pointer-events: none;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(110vh);
-        opacity: 0;
-      }
-    }
-
-
-    .nav {
-      font-family: "Bitcount Prop Double", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-      font-style: normal;
-      position: absolute;
-      bottom: 40%;
-      text-align: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.8s ease;
-      font: monospace;
-    }
-
-    .nav.show {
-      font-family: "Bitcount Prop Double", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity 0.8s ease;
-    }
-
-    .nav a {
-      font-family: "Pixelify Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-      display: block;
-      margin: 20px 0;
-      font-size: 25px;
-      text-decoration: none;
-      color: rgb(255, 0, 204);
-      transition: opacity 0.8s ease;
-    }
-.text{
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-      display: block;
-      margin: 12px 0;
-      text-decoration: none;
-      color: rgb(255, 0, 204);
-      transition: opacity 0.8s ease;
-    
-}
-
-.shadow{
-  text-decoration: none;
-    color: rgb(231, 0, 181);
-    transition: text-shadow 0.3s ease-in-out;
-}
-    .shadow:hover {
-  
-  text-shadow:2px 2px 5px rgb(189, 9, 111), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);
-  transition: text-shadow 0.3s ease-in;
-}
-
-  #nav a:hover {
-    text-shadow:2px 2px 5px rgba(189, 9, 111, 0.486), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);
-    transition: text-shadow 0.3s ease-in;
-
-  }
-    
-
-  #splash a:hover {
-    text-shadow:2px 2px 5px rgba(189, 9, 111, 0.486), -2px -2px 5px rgb(189, 9, 111), 2px -2px 5px rgb(189, 9, 111), -2px 2px 5px rgb(189, 9, 111);
-    transition: text-shadow 0.3s ease-in;
-
-  }
-  .text a {
-  transition: opacity 0.8s ease;
-}
-
-.text a.clicked {
-  opacity: 0;
-}
-
-   </style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="dropdown-container">
+    <button class="dropdown-trigger"><a href="index.html" id="ketis-link">KETI'S 
+      WORLD</a></button>
+      
+      <div class="dropdown-menu">
+        <svg class="dropdown-connector">
+          <line x1="71" y1="0" x2="40" y2="30" />
+          <line x1="80" y1="0" x2="110" y2="100" />
 
+      </svg>
+      <a id="ok"  href="Index2.html" id="ketis-link">Selected Works</a>
+       <a id="ok"  href="about.html" id="ketis-link">About Keti</a>
+      </div>
+    </div>
+
+
+  </div>
   <div class="splash-screen" id="splash">
     <svg id="splash-svg" viewBox="0 0 300 300" xml:space="preserve">
       <defs>
@@ -187,47 +32,88 @@
         <path id="outerCirclePath" d="M 150, 150 m -130, 0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0"/>
       </defs>
 
-
       <g id="cw">
-        <text font-size="40.4" fill="rgb(255, 0, 204)">
+        <text fill="rgb(189, 9, 111)">
           <textPath xlink:href="#innerCirclePath" startOffset="0%">
-            <a> KETI'S WORLD ************** </a> 
+            <a> KETI'S WORLD * KETI'S WORLD * </a> 
           </textPath>
         </text>
       </g>
 
 
       <g id="ccw">
-        <text font-size="30.4" fill="rgb(255, 0, 204)">
+        <text>
           <textPath xlink:href="#outerCirclePath" startOffset="0%">
-            **********************************************************************************************************************************************************
           </textPath>
         </text>
       </g>
     </svg>
   </div>
+</div>
+<div id="text3"> 
+  <a href="https://www.instagram.com/ketisphotos/?hl=en" class="insta-btn" target="_blank">
+    Instagram
+  </a>
+  <a href="mailto:ketisworld100@gmail.com" class="insta-btn2" target="_blank">
+    Email
+  </a>
+     </div>
 
+<div class="projects-container">
+  <a href="The smell of the sun.html">1. PHOTOGRAPHY - Smell Of The Sun</a>    <a href="ThePerfectHuman.html">2. IDENTITY - The Perfect Human</a>
+  <a href="Chopard.html">3. CAMPGAIN - Chopard ICE CUBE </a>
+  <a href="synth.html">4. WEBSITE - Alive Synth</a>
+  <a href="Routines.html">5. BOOK DESGIN - Routines</a>
+  <a href="First_Things_first.html">6. REDESIGN - First Things First</a> </div>
+ 
 
-  <nav class="nav" id="nav">
-    <a href="projects.html"> ++ Work ++ </a>
-    <a href="about.html"> About Keti  </a>
-    <a href="https://www.instagram.com/ketisphotos/?hl=en">  More Work </a>
-  </nav>
-</a>
-  <script>
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide" data-link="The smell of the sun.html">
+        <img src="000591500011.png" alt="Slide 1">
+        <div class="caption-overlay">Phtorgraphy for the editorial "The Smell Of The Sun".</div>
+      </div>
+  
+  
+      <div class="slide" data-link="ThePerfectHuman.html">
+        <img src="IMG_9614-Enhanced-NR-Recovered.jpg" alt="Avatar">
+        <div class="caption-overlay">Book on the pseudo-scientific analysis of beauty standards, gender norms, and social conventions.</div>
+      </div>
+  
+      <div class="slide" data-link="Chopard.html">
+        <img src="chopard ice-cube.jpeg" alt="Slide 1">
+        <div class="caption-overlay"> Chopard BTS with Emily Ratajkowski.</div>
+      </div>
 
-    const splash = document.getElementById("splash");
-    const nav = document.getElementById("nav");
+      <div class="slide" data-link="synth.html">
+        <img src="Tiny-Synth.png" alt="Slide 2"> 
+           <div class="caption-overlay"> Syntheszier Web Tool</div>
+         </div>
+      <div class="slide" data-link="Routines.html">
+        <img src="k nk.jpg" alt="Slide 2">
+        <div class="caption-overlay">Routines book is about daily, weekly, monthly and yearly routines.</div>
+      </div>
+          <div class="slide" data-link="First_Things_first.html">
+            <img src="Scan 7.png" alt="Slide 1">
+            <div class="caption-overlay"> Redesign of the orginal published First Things First 1964 manifesto.</div>
+          </div>
+     
+<script>
+const splash = document.getElementById("splash");
+const nav = document.getElementById("nav");
 
-    splash.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
+splash.addEventListener("click", () => {
+  splash.classList.add("hide");
 
-
+  setTimeout(() => {
+    splash.remove();
+    nav.classList.add("show");
+  }, 1400); 
+});
     function stars() {
       const star = document.createElement("div");
       star.className = "star";
-      star.textContent = "+";
+      star.textContent = "";
       star.style.left = Math.random() * innerWidth + "px";
       star.style.fontSize = Math.random() * 10 + 10 + "px";
       star.style.animationDuration = Math.random() * 3 + 3 + "s";
@@ -237,9 +123,41 @@
     }
 
     setInterval(stars, 400);
+    const slider = document.querySelector('.slider');
+const track = slider.querySelector('.slide-track');
+let isPaused = false;
 
- 
+slider.addEventListener('click', () => {
+  if (isPaused) {
+    track.style.animationPlayState = 'running';
+    isPaused = false;
+  } else {
+    track.style.animationPlayState = 'paused';
+    isPaused = true;
+  }
+});
+const slides = document.querySelectorAll('.slide');
+const overlay = document.getElementById('caption-overlay');
+
+slides.forEach(slide => {
+  let clickTimer = null;
+
+
+  slide.addEventListener('click', (e) => {
+    clearTimeout(clickTimer);
+    clickTimer = null;
+    const link = slide.getAttribute('data-link');
+    if (link) window.location.href = link;
+  });
+});
+
+// Hide overlay on click
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('show');
+});
+
   </script>
 
 </body>
 </html>
+

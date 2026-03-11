@@ -4,31 +4,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style4.css">
   <link rel="stylesheet" href="https://use.typekit.net/iwb5eae.css">
   
 
 </head>
 <body>
   <div class="dropdown-container">
-    <button class="dropdown-trigger"> <a href="index.html" id="ketis-link">Keti's World</a></button>
+    <button class="dropdown-trigger"><a href="index.html" id="ketis-link">KETI'S 
+      WORLD</a></button>
+      
       <div class="dropdown-menu">
-       <a id="ok"  href="projects.html" id="ketis-link">Work</a>
-       <a id="ok"  href="about.html" id="ketis-link">About</a>
+        <svg class="dropdown-connector">
+          <line x1="71" y1="0" x2="40" y2="30" />
+          <line x1="80" y1="0" x2="110" y2="100" />
+
+      </svg>
+      <a id="ok"  href="Index2.html" id="ketis-link">Selected Works</a>
+       <a id="ok"  href="about.html" id="ketis-link">About Keti</a>
       </div>
     </div>
-  </div>
+
+  
 <div id="text"> Chopard Ice Cube Collection </div>
         <div id="text4"> 
-            I assisted in the creation of photo and video shotlists.  Both shotlists were utilized to show the client, talent and crew the vision of the shoot. Through the successful completion of the shotlists we achieved amazing videos and photos!
+            I assisted in the creation of photo and video shotlists for Chopards BTS with Emily Ratajkowski. The shotlists were utilized to show the client, talent and crew the overall vision. Through this we achieved amazing videos and photos.
         </div>
-              <div id="imgGrid2">
-                <img class="img-item" src="emily.jpg" alt="Photo of Chopard">
-                <img class="img-item" src="chopard ice-cube.jpeg" alt="GIF 2">
-                <img class="img-item" src="chopard emily rata.jpg" alt="GIF 4">
-       
-            
-      
-   
-  <script src="script2.js"></script></script>
-</body>
+        <div id="imgGrid2">
+          <video class="img-item" controls autoplay muted loop>
+            <source src="AQM95l40YoY4wc8jaCv5R6RjUpQFMxvaorzFppTgK26T_PMLX0u8tEeiv5USPYQJ9A0gmITHpsCwhrB3jCKKSfOM60jlLTo_omQ0X12rrqfSQg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img class="img-item" src="chopard ice-cube.jpeg" alt="GIF 2">
+        <img class="img-item" src="563766360_18554189917028162_895239678721087783_n.jpg" alt="GIF 4">
+          <img class="img-item" src="emily.jpg" alt="Photo of Chopard">
+
+          <img class="img-item" src="chopard emily rata.jpg" alt="GIF 4">
+
+          <img class="img-item" src="564838443_18554189932028162_4185131084107986148_n.jpg" alt="GIF 2">
+
+          
+  
+      </div>
+      <script>const images = document.querySelectorAll("#imgGrid2 img");
+
+        images.forEach(img => {
+          img.addEventListener("click", () => {
+        
+            // close any other open image
+            images.forEach(i => {
+              if (i !== img) {
+                i.classList.remove("enlarged");
+              }
+            });
+        
+            // toggle clicked image
+            img.classList.toggle("enlarged");
+          });
+        });</script>
+    </body>
+    

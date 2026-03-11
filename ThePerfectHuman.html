@@ -4,21 +4,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style4.css">
   <link rel="stylesheet" href="https://use.typekit.net/iwb5eae.css">
   
-
+  <title>The Perfect Human</title>
 </head>
 <body>
   <div class="dropdown-container">
-    <button class="dropdown-trigger"> <a href="index.html" id="ketis-link">Keti's World</a></button>
+    <button class="dropdown-trigger"><a href="index.html" id="ketis-link">KETI'S 
+      WORLD</a></button>
+      
       <div class="dropdown-menu">
-       <a id="ok"  href="projects.html" id="ketis-link">Work</a>
-       <a id="ok"  href="about.html" id="ketis-link">About</a>
+        <svg class="dropdown-connector">
+          <line x1="71" y1="0" x2="40" y2="30" />
+          <line x1="80" y1="0" x2="110" y2="100" />
+      </svg>
+       <a id="ok"  href="index2.html" id="ketis-link">Selected Works</a>
+       <a id="ok"  href="about.html" id="ketis-link">About Keti</a>
       </div>
     </div>
-  </div>
-
   <div id="text"> The Perfect Human </div>
          <div id="text4" > 
           This book is a pseudo-scientific analysis of beauty standards, gender norms, and social conventions. To document the cues expressed through body language and dress styles, I photographed myself in a series of staged scenarios. 
@@ -41,5 +45,20 @@
               </div>
             
    
-  <script src="script2.js"></script></script>
+              <script>const images = document.querySelectorAll("#imgGrid2 img");
+
+                images.forEach(img => {
+                  img.addEventListener("click", () => {
+                
+                    // close any other open image
+                    images.forEach(i => {
+                      if (i !== img) {
+                        i.classList.remove("enlarged");
+                      }
+                    });
+                
+                    // toggle clicked image
+                    img.classList.toggle("enlarged");
+                  });
+                });</script>
 </body>
