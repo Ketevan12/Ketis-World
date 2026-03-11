@@ -1,6 +1,7 @@
 @import url("https://use.typekit.net/hmf7fjw.css");
 @import url("https://use.typekit.net/ovz5wmn.css");
 @import url('https://fonts.cdnfonts.com/css/cairopixel');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 body { 
   font-style: thin;
@@ -8,10 +9,14 @@ body {
   min-height: 100vh;
   background-size: .5em .5em;
   font-family: "input-mono", serif;
-  font-family: 'Cairopixel', sans-serif;
   background-color:rgb(252, 244, 244);
 }
-
+.pixelify-sans{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
 .input-mono {
 font-family: "input-mono", monospace;
 font-weight: 400;
@@ -29,7 +34,7 @@ font-style: normal;
 }
 
   .dropdown-trigger {
-    font-size: 28px;
+    font-size: 25px;
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -39,7 +44,7 @@ font-style: normal;
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 15px;
+    line-height: 20px;
     z-index: 9999;
   }
   
@@ -84,7 +89,7 @@ font-style: normal;
   text-decoration: none;
   border: none;
   box-shadow: none;
-  font-family: 'Cairopixel', sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
   display: fixed;
 }
 
@@ -142,7 +147,7 @@ font-style: normal;
   cursor: pointer;
   visibility: visible;
   transition: opacity 1.4s ease-out, visibility 1.4s ease-out;
-  font-family: "Cairopixel",sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
 font-style: normal;
 z-index: 1000;
 overflow:visible;
@@ -156,16 +161,16 @@ overflow:visible;
 #splash-svg {
   overflow:visible;
   max-width: 400px;
-  font-family: 'Cairopixel', sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 
 
-#cw {font-family: 'Cairopixel', sans-serif;
+#cw { font-family: "Pixelify Sans", sans-serif;
   animation: spinCW 18s linear infinite;
   transform-origin: 150px 150px;
   font-weight: 600;
-  font-size: 54px;
+  font-size: 44px;
   font-kerning: thin;
   color: rgb(189, 9, 111);
   transition: text-shadow 0.3s ease-in-out;
