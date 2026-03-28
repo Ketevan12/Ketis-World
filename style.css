@@ -47,7 +47,7 @@ font-style: normal;
 .dropdown-menu {
   position: absolute;
   top: 99%;
-  left: 57%; 
+  left: 53%; 
   transform: translateX(-50%);
   display: none;
   flex-direction: column;
@@ -102,21 +102,45 @@ font-style: normal;
   font-weight: 100;
   margin-top: 30px;
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 70px;
+}
+#ok2 {
+  border: 1px solid rgb(189, 9, 111); /* Combined duplicate border rules */
+  z-index: 1000;
+  width: max-content;
+  text-align: center;
+  padding: 5px;
+  background: rgb(252, 244, 244);
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(189, 9, 111);
+  font-family: "input-mono", monospace;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 25px;
+}
+#ok2:hover { 
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
 }
 
   #ok:hover {
-    box-shadow:2px 2px 5px rgb(151, 255, 239),
-     -2px -2px 5px rgb(151, 255, 239),
-      2px -2px 5px rgb(151, 255, 239),
-       -2px 2px 5px rgb(151, 255, 239);}
+    box-shadow:2px 2px 5px rgb(189, 9, 111),
+    -2px -2px 5px rgb(189, 9, 111),
+     2px -2px 5px rgb(189, 9, 111),
+      -2px 2px 5px rgb(189, 9, 111);
+      transition: text-shadow 0.3s ease-in;
+    }
   
  .dropdown-trigger:hover {
     border-radius: 50%;
-    box-shadow:2px 2px 5px rgb(151, 255, 239),
-     -2px -2px 5px rgb(151, 255, 239),
-      2px -2px 5px rgb(151, 255, 239),
-       -2px 2px 5px rgb(151, 255, 239);
+    box-shadow:2px 2px 5px rgb(189, 9, 111),
+    -2px -2px 5px rgb(189, 9, 111),
+     2px -2px 5px rgb(189, 9, 111),
+      -2px 2px 5px rgb(189, 9, 111);
  }
 
 .splash-screen.fade-out {
@@ -169,13 +193,14 @@ overflow:visible;
   font-kerning: thin;
   color: rgb(189, 9, 111);
   transition: text-shadow 0.3s ease-in-out;
+ 
 }
 
 #cw:hover {
-  text-shadow: 2px 2px 5px rgb(151, 255, 239),
-  -2px -2px 5px rgb(151, 255, 239),
-   2px -2px 5px rgb(151, 255, 239),
-    -2px 2px 5px rgb(151, 255, 239);
+  text-shadow:2px 2px 5px rgb(255, 255, 255),
+  -2px -2px 5px rgb(255, 255, 255),
+   2px -2px 5px rgb(255, 255, 255),
+    -2px 2px 5px rgb(255, 255, 255);
 }
 
 #ccw {
@@ -221,11 +246,10 @@ overflow:visible;
     }
     
     .shadow:hover {
-      text-shadow: 
-        2px 2px 5px rgb(124, 211, 255),
-       -2px -2px 5px rgb(101, 255, 234),
-        2px -2px 5px rgb(75, 219, 255),
-       -2px 2px 5px rgb(76, 186, 255);
+      box-shadow:2px 2px 5px rgb(189, 9, 111),
+      -2px -2px 5px rgb(189, 9, 111),
+       2px -2px 5px rgb(189, 9, 111),
+        -2px 2px 5px rgb(189, 9, 111);
       transition: text-shadow 0.3s ease-in;
     }
     
@@ -270,6 +294,7 @@ opacity: 0;}
   -2px -2px 5px rgb(189, 9, 111),
    2px -2px 5px rgb(189, 9, 111),
     -2px 2px 5px rgb(189, 9, 111);
+    transition: text-shadow 0.3s ease-in;
 }
 
 .slider:hover .slide-track {
@@ -320,14 +345,11 @@ opacity: 0;}
 }
 .projects-container {
   border: 1px solid rgb(189, 9, 111);
-  width: 20%;
   text-align: left;
-  padding: 5px;
   background: rgb(252, 244, 244);
   font-size: 12px;
   color: rgb(189, 9, 111);
   font-family: "input-mono", monospace;
-  font-weight: 100;
   margin: 10px;
   position: fixed;
 }
@@ -336,17 +358,18 @@ opacity: 0;}
   display: block;             
   border: 1px solid rgb(189, 9, 111);
   padding: 5px;
-  margin: 5px 0;
+margin: 10px;
   text-decoration: none;
   color: rgb(189, 9, 111);
   background: rgb(252, 244, 244);
   cursor:pointer;
 }
 .projects-container a:hover{
-  box-shadow:2px 2px 5px rgb(151, 255, 239),
-  -2px -2px 5px rgb(151, 255, 239),
-   2px -2px 5px rgb(151, 255, 239),
-    -2px 2px 5px rgb(151, 255, 239);
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
+    transition: text-shadow 0.3s ease-in;
 
 }
 @media (max-width: 600px) {
@@ -417,10 +440,11 @@ opacity: 0;}
   }
 }
 .insta-btn:hover{
-  box-shadow:2px 2px 5px rgb(151, 255, 239),
-  -2px -2px 5px rgb(151, 255, 239),
-   2px -2px 5px rgb(151, 255, 239),
-    -2px 2px 5px rgb(151, 255, 239);
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
+    transition: text-shadow 0.3s ease-in;
 }
 .insta-btn2{
   position: fixed;
@@ -436,10 +460,11 @@ opacity: 0;}
 }
 
 .insta-btn2:hover{
-  box-shadow:2px 2px 5px rgb(151, 255, 239),
-  -2px -2px 5px rgb(151, 255, 239),
-   2px -2px 5px rgb(151, 255, 239),
-    -2px 2px 5px rgb(151, 255, 239);
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
+    transition: text-shadow 0.3s ease-in;
 }
 @media (max-width: 600px) {
   .projects-container, 

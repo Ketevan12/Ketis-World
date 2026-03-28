@@ -101,21 +101,45 @@ font-style: normal;
   font-weight: 100;
   margin-top: 30px;
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 70px;
+}
+#ok2 {
+  border: 1px solid rgb(189, 9, 111); /* Combined duplicate border rules */
+  z-index: 1000;
+  width: max-content;
+  text-align: center;
+  padding: 5px;
+  background: rgb(252, 244, 244);
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(189, 9, 111);
+  font-family: "input-mono", monospace;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 25px;
+}
+#ok2:hover { 
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
 }
 
   #ok:hover {
-    box-shadow:2px 2px 5px rgb(151, 255, 239),
-     -2px -2px 5px rgb(151, 255, 239),
-      2px -2px 5px rgb(151, 255, 239),
-       -2px 2px 5px rgb(151, 255, 239);}
+    box-shadow:2px 2px 5px rgb(189, 9, 111),
+    -2px -2px 5px rgb(189, 9, 111),
+     2px -2px 5px rgb(189, 9, 111),
+      -2px 2px 5px rgb(189, 9, 111);
+      transition: text-shadow 0.3s ease-in;
+    }
   
  .dropdown-trigger:hover {
     border-radius: 50%;
-    box-shadow:2px 2px 5px rgb(151, 255, 239),
-     -2px -2px 5px rgb(151, 255, 239),
-      2px -2px 5px rgb(151, 255, 239),
-       -2px 2px 5px rgb(151, 255, 239);
+    box-shadow:2px 2px 5px rgb(189, 9, 111),
+    -2px -2px 5px rgb(189, 9, 111),
+     2px -2px 5px rgb(189, 9, 111),
+      -2px 2px 5px rgb(189, 9, 111);
  }
 
 
