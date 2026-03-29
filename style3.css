@@ -148,16 +148,7 @@ font-style: normal;
   
   
 
-@media (max-width: 700px) {
-  .bubble2 {  
-    top: 50%;  
-   width: 100%;       
-  height: 100%;      
-    position: absolute;          
-    transform: translate(-50%, -50%); 
 
-  }
-}
   #imgGridnew {
     position: relative;
     z-index: 10;
@@ -181,11 +172,19 @@ font-style: normal;
     }
   }
   .bubble2 {
-    width: 100px;
-    height: 100%;
-
+    position: fixed;     
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-
+  @media (max-width: 600px) {
+    .bubble2 {
+      margin-bottom: 1517px;
+      top: 60%;
+      left: 50%;
+      box-sizing: border-box; 
+    }
+  }
   .main-content {
 
   }
@@ -290,42 +289,4 @@ font-style: normal;
   margin: 5 auto; /* Center the grid container */
   padding: 0px;
   margin-top: -65px;
-}
-@media (max-width: 500px) {
-#imgGrid2 {
-  grid-template-columns: 1fr;
-  width: 50%;
-  gap: 20px;
-  padding: 0 10px;
-}
-}
-#imgGrid2 img,
-#imgGrid2 video {
-  width: 300px;       
-  height: auto;       /* maintain aspect ratio */
-  object-fit: contain;
-  cursor: pointer;
-  transition: all 0.45s ease;
-  margin: 5px;   
-}
-
-
-
-#imgGrid2 img.enlarged {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 90vw;
-  max-height: 85vh;
-  width: auto;
-  height: auto;
-  z-index: 19;
-}
-
-
-.img-item{
-  width: 100%;
-  height: auto;
-  object-fit: contain;
 }
