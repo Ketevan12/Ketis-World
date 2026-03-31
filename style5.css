@@ -346,4 +346,14 @@ font-style: normal;
 .img-item {
   transition: all 0.85s ease;
   position: relative;
-  ov
+  overflow:scroll;
+  z-index: 1;
+}
+
+.item:hover .img-item {
+  transform: scale(1.4);
+  overflow:scroll;
+  z-index: 200;
+}
+
+
