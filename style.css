@@ -197,10 +197,10 @@ overflow:visible;
 }
 
 #cw:hover {
-  text-shadow:2px 2px 5px rgb(255, 255, 255),
-  -2px -2px 5px rgb(255, 255, 255),
-   2px -2px 5px rgb(255, 255, 255),
-    -2px 2px 5px rgb(255, 255, 255);
+  text-shadow:2px 2px 5px rgba(252, 244, 244, 0.603),
+  -2px -2px 5px rgb(252, 244, 244),
+   2px -2px 5px rgba(252, 244, 244, 0.791),
+    -2px 2px 5px rgb(252, 244, 244);
 }
 
 #ccw {
@@ -286,6 +286,7 @@ opacity: 0;}
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 
 }
 
