@@ -89,7 +89,7 @@ font-style: normal;
 }
 
 #ok {
-  border: 1px solid rgb(189, 9, 111); /* Combined duplicate border rules */
+  border: 1px solid rgb(189, 9, 111); 
   z-index: 1000;
   width: max-content;
   text-align: center;
@@ -105,7 +105,7 @@ font-style: normal;
   margin-right: 70px;
 }
 #ok2 {
-  border: 1px solid rgb(189, 9, 111); /* Combined duplicate border rules */
+  border: 1px solid rgb(189, 9, 111); 
   z-index: 1000;
   width: max-content;
   text-align: center;
@@ -198,9 +198,9 @@ overflow:visible;
 
 #cw:hover {
   text-shadow:2px 2px 5px rgba(252, 244, 244, 0.603),
-  -2px -2px 5px rgb(252, 244, 244),
+  -2px -2px 5px rgb(205, 200, 200),
    2px -2px 5px rgba(252, 244, 244, 0.791),
-    -2px 2px 5px rgb(252, 244, 244);
+    -2px 2px 5px rgb(211, 196, 196);
 }
 
 #ccw {
