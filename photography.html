@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Keti's World - Photography</title>
   <link rel="icon" href="sticker.png">
-  <link rel="stylesheet" href="style5.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -37,51 +37,62 @@
       Email
     </a>
        </div>
-  
-       <div class="projects-container">
-     <a >Photography</a>
 
-  </div>
-        <div id="imgGrid2">
-
-
-            <a href="The smell of the sun.html" >
-                <div class="item">
-                  <img class="img-item" src="000591500011.png" alt="Description">
-                  <div class="caption">The Smell Of The Sun</div>
-                </div>
-              </a>
-          
-              <a href="Chopard.html" >
-                <div class="item">
-                  <img class="img-item" src="564838443_18554189932028162_4185131084107986148_n.jpg" alt="Description">
-                  <div class="caption">Chopard ICE CUBE</div>
-                </div>
-              </a>
-         
-              <a href="event photography.html" >
-                <div class="item">
-                  <img class="img-item" src="IMG_0576.jpg">
-                  <div class="caption">The Play Ground</div>
-                </div>
-              </a>
+  <div class="projects-container">
+    <a href="ThePerfectHuman.html">1. FASHION PHOTOGRAPHY - The Smell Of The Sun</a>
+   <a href="Routines.html">2. ART DIRECTION - Chopard ICE CUBE</a>
+   <a href="First_Things_first.html">3. EVENT PHOTOGRAPHY - The Play Ground</a> 
+   <a href="The smell of the sun.html">4. VIDEOGRAPHY - Strings Of Attachment</a> 
+   <a href="First_Things_first.html">5. PRODUCT PHOTOGRAPHY - MAADANG STORY</a>
+   <a href="The smell of the sun.html">6. FASHION PHOTOGRAPHY - Happy </a> 
+ </div>
+ 
+ 
+ 
+   <div class="slider">
+     <div class="slide-track">
+ 
+ 
+       <div class="slide" data-link="The smell of the sun.html">
+         <img src="000591510027 Medium.png" alt="The Smell of The Sun">
+         <div class="caption-overlay">The Smell Of The Sun, a collection that explores the idea of home across borders & generations.</div>
+       </div>
       
-              <a href="Studio photography.html" >
-                <div class="item">
-                  <img class="img-item" src="IMG_3205.jpg">
-                  <div class="caption">MAADANG STORY
-                  </div>
-                </div>
-              </a>
-  
-              <a href="SOA.html" >
-                <div class="item">
-                  <img class="img-item" src="IMG_9721.jpg">
-                  <div class="caption">Strings Of attachment</div>
-                </div>
-              </a>
+       <div class="slide" data-link="Chopard.html" >
+         <img  src="564838443_18554189932028162_4185131084107986148_n.jpg" alt="First Things First">
+         <div class="caption-overlay"> Chopard ICE CUBE campaign with Emily Ratajkowski. </div>
+       </div>
+ 
+       <div class="slide" data-link="event photography.html">
+         <img src="IMG_0576.jpg" alt="First Things First">
+         <div class="caption-overlay"> The Play Ground an event with artists such as ASAP Ferg and HUNTER BDM performing live music.
+        </div>
+       </div>
+       <div class="slide" data-link="Studio photography.html">
+         <img src="IMG_3205.jpg">
+         <div class="caption-overlay"> MAADANG STORY a fashion accessories collection captured through product photography.  </div>
+       </div>
+       <div class="slide" data-link="SOA.html">
+         <img src="IMG_9663.jpg" alt="First Things First">
+         <div class="caption-overlay">Strings Of Attachment, this short film was nominated at ASVOFF film festival. </div>
+       </div>
+       <div class="slide" data-link="happy.html">
+        <img src="IMG_9143.jpg" alt="First Things First">
+        <div class="caption-overlay"> Happy an editorial fashion shoot advertising Happy99 clothing. </div>
+      </div>
+       <div class="projects-container">
+
+         
 
   <script>
+      document.querySelectorAll('.slide').forEach(slide => {
+    slide.addEventListener('click', () => {
+      const link = slide.getAttribute('data-link');
+      if (link) {
+        window.location.href = link;
+      }
+    });
+  });
 
     
   </script>

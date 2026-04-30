@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Keti's World - Design</title>
   <link rel="icon" href="sticker.png">
-  <link rel="stylesheet" href="style5.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="dropdown-container">
-    <button class="dropdown-trigger"><a href="Index2.html" id="ketis-link">KETI'S 
-      WORLD</a></button>
+    <button class="dropdown-trigger"><a href="Index2.html" id="ketis-link">KETI'S WORLD</a></button>
       
           <div class="dropdown-menu">
             <svg class="dropdown-connector">
@@ -42,44 +41,54 @@
      <a >Design</a>
 
   </div>
-        <div id="imgGrid2">
+  <div class="projects-container">
+     <a href="ThePerfectHuman.html">1. BOOK DESIGN - The Perfect Human </a>
+     <a href="Routines.html">2. BOOK AND WEB DEISGN - Routines </a>
+     <a href="synth.html">3. PHONE WEB TOOL - Tiny Synth </a> 
+    <a href="First_Things_first.html">4. REDESIGN -  First Things FIrst </a>
+    <a href="The smell of the sun.html">5. BOOK DESGIN - Alone </a> 
+  </div>
+  
+  
+  
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide" data-link="ThePerfectHuman.html">
+          <img src="perfect-human.gif" alt="Perfect Human">
+          <div class="caption-overlay">The Perfect Human book is a pseudo-scientific analysis of beauty standards, gender norms, and social conventions.</div>
+        </div>
+        <div class="slide" data-link="Routines.html">
+          <img  src="ROUTINES BOOK COVER IMAGE.png" alt="First Things First">
+          <div class="caption-overlay">Routine's book explores daily, weekly, monthly and yearly routines, with a website created to showcase its release.
+          </div>
+        </div>
 
+        <div class="slide" data-link="synth.html">
+          <img src="synth mockup.png" alt="First Things First">
+          <div class="caption-overlay"> Tiny Synth is a web synthesizer made for musicians who want to have a little fun online.</div>
+        </div>
 
-            <a href="ThePerfectHuman.html" >
-                <div class="item">
-                  <img class="img-item" src="perfect-human.gif" alt="Description">
-                  <div class="caption">The Perfect Human</div>
-                </div>
-              </a>
-              <a href="First_Things_first.html" >
-                <div class="item">
-                  <img class="img-item" src="COVER first things first.png" alt="Description">
-                  <div class="caption">First Things First</div>
-                </div>
-              </a>
-              <a href="synth.html" >
-                <div class="item">
-                  <img class="img-item" src="Tiny-Synth.png" alt="Description">
-                  <div class="caption">Tiny Synth</div>
-                </div>
-              </a>
-              <a href="Alone.html" >
-                <div class="item">
-                  <img class="img-item" src="alone-book.gif">
-                  <div class="caption">Alone </div>
-                </div>
-              </a>
-        
-              <a href="Routines.html" >
-                <div class="item">
-                  <img class="img-item" src="ROUTINES BOOK COVER IMAGE.png" alt="Description">
-                  <div class="caption">Routines</div>
-                </div>
-              </a>
-         
+        <div class="slide" data-link="First_Things_first.html">
+          <img src="COVER first things first.png">
+          <div class="caption-overlay">Redesign of the First Things First 1964 manifesto into a riso printed zine.</div>
+        </div>
 
+        <div class="slide" data-link="Alone.html">
+          <img src="alone-book.gif" alt="First Things First">
+          <div class="caption-overlay">Alone a book weaving music, short experts from books, and short stories to create a book about what loneliness feels like.</div>
+        </div>
+  
+      </div>
+  
   <script>
-
+  document.querySelectorAll('.slide').forEach(slide => {
+    slide.addEventListener('click', () => {
+      const link = slide.getAttribute('data-link');
+      if (link) {
+        window.location.href = link;
+      }
+    });
+  });
     
   </script>
 
