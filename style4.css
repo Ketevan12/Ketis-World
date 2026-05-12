@@ -57,6 +57,9 @@ body {
 .dropdown-connector {
   position: absolute;
   pointer-events: none;
+    width: 300px;
+    height: 2500px;
+    overflow: visible;
 }
 
 .dropdown-connector line {
@@ -99,7 +102,29 @@ body {
               -2px 2px 5px rgb(189, 9, 111);
 }
 
-/* LINK */
+
+#ok4 {
+  border: 1px solid rgb(189, 9, 111); 
+  z-index: 1000;
+  width: max-content;
+  text-align: center;
+  padding: 5px;
+  background: rgb(252, 244, 244);
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(189, 9, 111);
+  font-family: "input-mono", monospace;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 45px;
+}
+#ok4:hover { 
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
+}
 
 #ketis-link,
 #ketis-link:visited,
@@ -137,6 +162,13 @@ body {
   margin-top: 2dvh;
   margin-bottom: 30px;
   margin-left:5%;
+}
+#nm {
+  font-size: 13px;
+  display: block;
+  margin-top: 1dvh;
+  justify-content: center;
+  align-items: center;
 }
 
 #text2 {
@@ -271,3 +303,69 @@ color: rgb(189, 9, 111);
   -2px 2px 5px rgb(189, 9, 111);
 }
 
+
+#imgGrid4 {
+  top: 100px;
+    columns: 10 20pc;
+    column-gap: 9px;
+    width: 90%;
+    margin: 0 auto;
+}
+    .img-item { 
+      width: 110px;
+      margin: 10 1.5rem 1.5rem 0;
+      display: inline-block;
+      width: 100%;
+      transition: all .25s ease-in-out;
+      }
+      img:hover {
+        box-shadow: 2px 2px 5px rgb(189, 9, 111),
+        -2px -2px 5px rgb(189, 9, 111),
+         2px -2px 5px rgb(189, 9, 111),
+        -2px 2px 5px rgb(189, 9, 111);
+      }
+      img {
+        width: 100%;
+        transition: all .25s ease-in-out;
+      }
+    
+    
+  
+  
+
+#imgGrid4 img.enlarged {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  z-index: 19;
+}
+
+#ok3 {
+  border: 1px solid rgb(189, 9, 111); 
+  z-index: 1000;
+  width: max-content;
+  text-align: center;
+  padding: 5px;
+  background: rgb(252, 244, 244);
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(189, 9, 111);
+  font-family: "input-mono", monospace;
+  font-weight: 100;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 75px;
+}
+#ok3:hover { 
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
+}

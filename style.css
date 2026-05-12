@@ -63,7 +63,11 @@ font-style: normal;
 .dropdown-connector {
   position: absolute;
   pointer-events: none;
-}
+    width: 300px;
+    height: 2500px;
+    overflow: visible;
+  }
+
 
 .dropdown-connector line {
   stroke: rgb(189, 9, 111);
@@ -126,6 +130,52 @@ font-style: normal;
    2px -2px 5px rgb(189, 9, 111),
     -2px 2px 5px rgb(189, 9, 111);
 }
+
+#ok3 {
+  border: 1px solid rgb(189, 9, 111); 
+  z-index: 1000;
+  width: max-content;
+  text-align: center;
+  padding: 5px;
+  background: rgb(252, 244, 244);
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(189, 9, 111);
+  font-family: "input-mono", monospace;
+  font-weight: 100;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 75px;
+}
+#ok3:hover { 
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
+}
+#ok4 {
+  border: 1px solid rgb(189, 9, 111); 
+  z-index: 1000;
+  width: max-content;
+  text-align: center;
+  padding: 5px;
+  background: rgb(252, 244, 244);
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(189, 9, 111);
+  font-family: "input-mono", monospace;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 45px;
+}
+#ok4:hover { 
+  box-shadow:2px 2px 5px rgb(189, 9, 111),
+  -2px -2px 5px rgb(189, 9, 111),
+   2px -2px 5px rgb(189, 9, 111),
+    -2px 2px 5px rgb(189, 9, 111);
+}
+
 
   #ok:hover {
     box-shadow:2px 2px 5px rgb(189, 9, 111),
@@ -422,6 +472,7 @@ margin: 10px;
   border: 1px solid rgb(189, 9, 111); 
     
 }
+
 
 .insta-btn{
   position: fixed;
